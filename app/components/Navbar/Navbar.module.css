@@ -1,0 +1,10 @@
+.container li {
+  text-decoration: none;
+  transition: all 0.4s;
+  position: relative;
+}
+
+.container li:hover {
+  color: white;
+  transform: rotate(-7deg);
+}
