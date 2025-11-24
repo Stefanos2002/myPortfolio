@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./HeroDetails.module.css";
 import TextType from "../TextAnimation/TextType";
+import { FaInstagram, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
+import { FaXTwitter, FaGithub } from "react-icons/fa6";
 
 export default function HeroDetails() {
   return (
@@ -37,6 +39,38 @@ export default function HeroDetails() {
             Web Developer crafting sleek, responsive experiences from Patras,
             Greece.
           </p>
+          <div className="text-white flex flex-row -translate-x-3 mt-6 text-lg">
+            <a
+              href="https://www.facebook.com/stefanos.kaloulis/"
+              className="hover:-translate-y-2 hover:text-neutral-400 p-2 transition-all duration-500"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://x.com/SKaloulis"
+              className="hover:-translate-y-2 hover:text-neutral-400 p-2 transition-all duration-500"
+            >
+              <FaXTwitter />
+            </a>
+            <a
+              href="https://www.instagram.com/s_kaloulis"
+              className="hover:-translate-y-2 hover:text-neutral-400 p-2 transition-all duration-500"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/stefanos-kaloulis-b4ba792b6/"
+              className="hover:-translate-y-2 hover:text-neutral-400 p-2 transition-all duration-500"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              href="https://github.com/Stefanos2002"
+              className="hover:-translate-y-2 hover:text-neutral-400 p-2 transition-all duration-500"
+            >
+              <FaGithub />
+            </a>
+          </div>
         </div>
       </div>
       <div></div>

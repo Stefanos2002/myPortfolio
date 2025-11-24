@@ -7,10 +7,10 @@ export default function Navbar() {
         className={`text-neutral-400 ${styles.container} text-[17px] leading-12 mr-10 mt-14 mb-16 text-left`}
       >
         <li>
-          <Link href={"#home"}>Home</Link>
+          <Link href={"/"}>Home</Link>
         </li>
         <li>
-          <Link href={"#about"}>About Me</Link>
+          <Link href={"/about"}>About Me</Link>
         </li>
         <li>
           <Link href={"#services"}>My Services</Link>
