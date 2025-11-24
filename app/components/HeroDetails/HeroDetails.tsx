@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./HeroDetails.module.css";
+import TextType from "../TextAnimation/TextType";
 
 export default function HeroDetails() {
   return (
@@ -15,10 +16,23 @@ export default function HeroDetails() {
           />
         </div>
         <div className="flex w-lg justify-center flex-col">
-          <h1 className="uppercase text-white text-4xl font-black tracking-[2.5px]">
+          <h1 className="uppercase text-white text-4xl font-black tracking-[2px]">
             Stefanos Kaloulis
           </h1>
-          <h2 className="text-white text-xl pt-4 pb-4">Web Developer</h2>
+          <h2 className="text-white text-xl pt-4 pb-4">
+            <TextType
+              text={[
+                "Frontend Developer",
+                "React Developer",
+                "Next.js Developer",
+                "Fullstack Developer",
+              ]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="|"
+            />
+          </h2>
           <p className="text-neutral-400">
             Web Developer crafting sleek, responsive experiences from Patras,
             Greece.
