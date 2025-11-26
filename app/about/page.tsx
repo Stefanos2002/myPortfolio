@@ -1,6 +1,17 @@
-import Image from "next/image";
+"use client";
+
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 import TiltedCard from "../components/TiltedCard/TiltedCard";
 import styles from "./about.module.css";
+import dynamic from "next/dynamic";
+
+const CircleProgress = dynamic(
+  () => import("../components/CircleProgress/CircleProgress"),
+  {
+    ssr: false,
+  }
+);
 
 export default function About() {
   return (
@@ -97,17 +108,27 @@ export default function About() {
             </>
           }
         />
-        <p className="text-white leading-7 text-md">
-          My name is Stefanos Kaloulis, and I am a graduate of the Department of
-          Computer Science at the University of Western Macedonia. I am fluent
-          in English and have a strong interest in programming.
-          <br /> I have acquired both basic and advanced knowledge of HTML, CSS,
-          JavaScript, and TypeScript, as well as libraries and frameworks such
-          as React, Next.js, and Tailwind CSS. I have also worked on Wordpress
-          projects and I am passionate about creating impressive and functional
-          websites.
-        </p>
+        <div className="flex flex-col gap-4 justify-center">
+          <p className="text-neutral-300 text-left leading-[1.8rem] text-[15px]">
+            Hi, I’m Stefanos Kaloulis, a web developer and Computer Science
+            graduate from the University of Western Macedonia.
+          </p>
+          <p className="text-neutral-300 text-left leading-[1.8rem] text-[15px]">
+            I’m fluent in English and passionate about creating clean,
+            functional, and visually appealing websites. I’ve worked extensively
+            with HTML, CSS, JavaScript, and TypeScript, and I enjoy building
+            responsive and user-friendly applications using React, Next.js, and
+            Tailwind CSS. I’ve also done several WordPress projects, handling
+            everything from theme customization to plugin integration and site
+            optimization.
+          </p>
+          <p className="text-neutral-300 text-left leading-[1.8rem] text-[15px]">
+            I love bringing ideas to life on the web and am always exploring new
+            tools and techniques to make my projects even better.
+          </p>
+        </div>
       </div>
+      <CircleProgress />
     </div>
   );
 }
