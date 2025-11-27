@@ -1,6 +1,7 @@
 import AnimatedCircle from "../components/AnimatedCircle/AnimatedCircle";
 import "react-circular-progressbar/dist/styles.css";
 import TiltedCard from "../components/TiltedCard/TiltedCard";
+import { FaCheckCircle } from "react-icons/fa";
 import styles from "./about.module.css";
 
 export default function About() {
@@ -133,7 +134,28 @@ export default function About() {
           <AnimatedCircle label="Wordpress" value={73} />
         </div>
       </div>
-      <div>hello there</div>
+      <div className="flex gap-10 flex-row items-center justify-center">
+        <div className="bg-black h-86 w-2/5 p-10 rounded-3xl flex flex-col">
+          <h1 className="text-white text-left border-b-[0.5] pb-1">
+            Knowledge
+          </h1>
+          <ul className="text-neutral-400 list">
+            <li className="flex flex-row items-center gap-2">
+              <FaCheckCircle />
+              Next.js
+            </li>
+            <li className="flex flex-row items-center gap-2">
+              <FaCheckCircle />
+              React.js
+            </li>
+          </ul>
+        </div>
+        <div className="bg-black h-86 w-2/5 p-10 rounded-3xl">
+          <h1 className="text-white text-left border-b-[0.5] pb-1">
+            Interests
+          </h1>
+        </div>
+      </div>
     </div>
   );
 }
