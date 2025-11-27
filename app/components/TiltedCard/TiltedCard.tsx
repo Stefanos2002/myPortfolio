@@ -166,11 +166,7 @@ export default function TiltedCard({
 
         {/* BACK SIDE */}
         <div
-          className="
-    absolute inset-0 rounded-[15px] bg-black px-6 flex flex-col justify-center
-    transform-[rotateY(180deg)]
-    backface-hidden cursor-pointer
-   "
+          className="absolute inset-0 rounded-[15px] bg-black px-6 flex flex-col justify-center transform-[rotateY(180deg)] backface-hidden cursor-pointer"
           style={{ pointerEvents: flipped ? "auto" : "none" }}
           onClick={(e) => {
             // Only flip back if clicking empty area

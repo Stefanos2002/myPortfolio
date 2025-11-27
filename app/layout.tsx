@@ -23,8 +23,9 @@ export default function RootLayout({
       <body
         className={` ${montSerrat.variable} antialiased flex relative bg-neutral-900 flex-row w-full h-screen`}
       >
-        {" "}
-        <Navbar />
+        <div className="relative h-full w-2xs">
+          <Navbar />
+        </div>
         {children}
       </body>
     </html>

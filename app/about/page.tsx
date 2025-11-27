@@ -1,17 +1,7 @@
-"use client";
-
-import { CircularProgressbar } from "react-circular-progressbar";
+import AnimatedCircle from "../components/AnimatedCircle/AnimatedCircle";
 import "react-circular-progressbar/dist/styles.css";
 import TiltedCard from "../components/TiltedCard/TiltedCard";
 import styles from "./about.module.css";
-import dynamic from "next/dynamic";
-
-const CircleProgress = dynamic(
-  () => import("../components/CircleProgress/CircleProgress"),
-  {
-    ssr: false,
-  }
-);
 
 export default function About() {
   return (
@@ -128,7 +118,22 @@ export default function About() {
           </p>
         </div>
       </div>
-      <CircleProgress />
+      <div className="flex flex-col items-center bg-black justify-center gap-10 mt-24 mb-24 pb-10 pt-10 rounded-xl">
+        <div className="flex gap-10 flex-row">
+          <AnimatedCircle label="Next.js" value={90} />
+          <AnimatedCircle label="React.js" value={86} />
+          <AnimatedCircle label="Typescript" value={83} />
+          <AnimatedCircle label="Javascript" value={80} />
+        </div>
+        <div className="flex gap-10 flex-row">
+          <AnimatedCircle label="Tailwind" value={95} />
+          <AnimatedCircle label="HTML" value={95} />
+          <AnimatedCircle label="Node.js" value={78} />
+          <AnimatedCircle label="MongoDB" value={76} />
+          <AnimatedCircle label="Wordpress" value={73} />
+        </div>
+      </div>
+      <div>hello there</div>
     </div>
   );
 }
