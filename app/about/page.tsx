@@ -2,18 +2,19 @@ import AnimatedCircle from "../components/AnimatedCircle/AnimatedCircle";
 import "react-circular-progressbar/dist/styles.css";
 import TiltedCard from "../components/TiltedCard/TiltedCard";
 import { FaCheckCircle } from "react-icons/fa";
+import { GiLightBulb } from "react-icons/gi";
 import styles from "./about.module.css";
 
 export default function About() {
   return (
-    <div className="flex relative pt-10 pl-30 pr-30 flex-col w-full h-full">
-      <div className="flex w-full pb-10 pt-10 flex-col">
+    <div className="flex relative pt-10 pr-22 pl-20 flex-col w-full h-full">
+      <div className="flex w-full pb-10 pt-10 flex-col order-1">
         <span className="text-neutral-400 text-xs mb-4 bg-neutral-800 w-max uppercase p-3">
           About
         </span>
         <h1 className="text-white font-extrabold text-3xl">About Me</h1>
       </div>
-      <div className="flex flex-row gap-10">
+      <div className="flex flex-row gap-10 order-2">
         <TiltedCard
           imageSrc="/images/profile2.jpg"
           containerHeight="300px"
@@ -119,7 +120,7 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center bg-black justify-center gap-10 mt-24 mb-24 pb-10 pt-10 rounded-xl">
+      <div className="flex flex-col order-4 items-center bg-transparent justify-center gap-10 mt-20 mb-20 pb-10 pt-10 rounded-xl">
         <div className="flex gap-10 flex-row">
           <AnimatedCircle label="Next.js" value={90} />
           <AnimatedCircle label="React.js" value={86} />
@@ -134,26 +135,158 @@ export default function About() {
           <AnimatedCircle label="Wordpress" value={73} />
         </div>
       </div>
-      <div className="flex gap-10 flex-row items-center justify-center">
+      <div className="flex gap-10 order-5 mb-24 flex-row items-center justify-center">
         <div className="bg-black h-86 w-2/5 p-10 rounded-3xl flex flex-col">
           <h1 className="text-white text-left border-b-[0.5] pb-1">
-            Knowledge
+            Development Tools
           </h1>
-          <ul className="text-neutral-400 list">
+          <ul className="text-neutral-400 mt-6 leading-8 list">
             <li className="flex flex-row items-center gap-2">
               <FaCheckCircle />
-              Next.js
+              Git/GitHub
             </li>
             <li className="flex flex-row items-center gap-2">
               <FaCheckCircle />
-              React.js
+              Vercel
+            </li>
+            <li className="flex flex-row items-center gap-2">
+              <FaCheckCircle />
+              phpMyAdmin
+            </li>
+            <li className="flex flex-row items-center gap-2">
+              <FaCheckCircle />
+              Visual Studio Code
+            </li>
+            <li className="flex flex-row items-center gap-2">
+              <FaCheckCircle />
+              REST/External APIs
+            </li>
+            <li className="flex flex-row items-center gap-2">
+              <FaCheckCircle />
+              Web Server Management
             </li>
           </ul>
         </div>
-        <div className="bg-black h-86 w-2/5 p-10 rounded-3xl">
+        <div className="bg-black h-86 w-[45%] p-10 rounded-3xl">
           <h1 className="text-white text-left border-b-[0.5] pb-1">
             Interests
           </h1>
+          <ul className="text-neutral-400 mt-6 leading-8 list">
+            <li className="flex flex-row items-center gap-2">
+              <GiLightBulb />
+              Crafting Dynamic Websites
+            </li>
+            <li className="flex flex-row items-center gap-2">
+              <GiLightBulb />
+              Responsive UX/UI Design
+            </li>
+            <li className="flex flex-row items-center gap-2">
+              <GiLightBulb />
+              API Integration
+            </li>
+            <li className="flex flex-row items-center gap-2">
+              <GiLightBulb />
+              Front-End Development
+            </li>
+            <li className="flex flex-row items-center gap-2">
+              <GiLightBulb />
+              Back-End Development
+            </li>
+            <li className="flex flex-row items-center gap-2">
+              <GiLightBulb />
+              Website Maintenance & Optimization
+            </li>
+            <li className="flex flex-row items-center gap-2">
+              <GiLightBulb />
+              Adaptation to New Technologies
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="flex flex-row order-3 bg-black justify-evenly gap-10 mt-24 px-6 py-12 rounded-xl">
+        <div className="flex flex-col">
+          <h1 className="text-white font-bold pb-1 text-xl">Education</h1>
+          <div className="flex flex-col h-full items-center justify-center">
+            <span className="text-white font-bold text-lg px-4 py-3 rounded-full">
+              2020 - 2025
+            </span>
+            <div>
+              <span className="text-white text-lg block">
+                University of Western Macedonia
+              </span>
+              <span className="text-neutral-400 text-[15px] text-center block">
+                BSc in Computer Science
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <h1 className="text-white font-bold pb-1 text-xl">Experience</h1>
+          <div className="flex flex-row items-center justify-center mt-10 pr-4 gap-5">
+            <span className="text-neutral-400 text-sm bg-neutral-800 px-4 py-2 rounded-full">
+              2020 - 2025
+            </span>
+            <div>
+              <span className="text-white block">
+                University of Western Macedonia
+              </span>
+              <span className="text-neutral-400 text-[13px] block">
+                BSc in Computer Science
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-row items-center justify-center mt-10 pr-4 gap-5">
+            <span className="text-neutral-400 text-sm bg-neutral-800 px-4 py-2 rounded-full">
+              2020 - 2025
+            </span>
+            <div>
+              <span className="text-white block">
+                University of Western Macedonia
+              </span>
+              <span className="text-neutral-400 text-[13px] block">
+                BSc in Computer Science
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-row items-center justify-center mt-10 pr-4 gap-5">
+            <span className="text-neutral-400 text-sm bg-neutral-800 px-4 py-2 rounded-full">
+              2020 - 2025
+            </span>
+            <div>
+              <span className="text-white block">
+                University of Western Macedonia
+              </span>
+              <span className="text-neutral-400 text-[13px] block">
+                BSc in Computer Science
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-row items-center justify-center mt-10 pr-4 gap-5">
+            <span className="text-neutral-400 text-sm bg-neutral-800 px-4 py-2 rounded-full">
+              2020 - 2025
+            </span>
+            <div>
+              <span className="text-white block">
+                University of Western Macedonia
+              </span>
+              <span className="text-neutral-400 text-[13px] block">
+                BSc in Computer Science
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-row items-center justify-center mt-10 pr-4 gap-5">
+            <span className="text-neutral-400 text-sm bg-neutral-800 px-4 py-2 rounded-full">
+              2020 - 2025
+            </span>
+            <div>
+              <span className="text-white block">
+                University of Western Macedonia
+              </span>
+              <span className="text-neutral-400 text-[13px] block">
+                BSc in Computer Science
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

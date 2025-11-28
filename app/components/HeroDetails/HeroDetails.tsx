@@ -6,7 +6,7 @@ import { FaXTwitter, FaGithub } from "react-icons/fa6";
 
 export default function HeroDetails() {
   return (
-    <div className="bg-neutral-900 flex items-center justify-center h-full w-full">
+    <div className="bg-neutral-900 flex items-center justify-center h-screen w-full">
       <div className="flex flex-row">
         <div className={`${styles.imageWrapper} mr-16`}>
           <Image
@@ -24,10 +24,10 @@ export default function HeroDetails() {
           <h2 className="text-white text-xl pt-4 pb-4">
             <TextType
               text={[
-                "Frontend Developer",
                 "React Developer",
                 "Next.js Developer",
                 "Fullstack Developer",
+                "Wordpress Developer",
               ]}
               typingSpeed={75}
               pauseDuration={1500}
