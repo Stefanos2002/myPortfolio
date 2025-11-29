@@ -4,17 +4,22 @@ import TiltedCard from "../components/TiltedCard/TiltedCard";
 import { FaCheckCircle } from "react-icons/fa";
 import { GiLightBulb } from "react-icons/gi";
 import styles from "./about.module.css";
+import AOSWrapper from "../components/AOSWrapper/AOSWrapper";
 
 export default function About() {
   return (
     <div className="flex relative pt-10 pr-22 pl-20 flex-col w-full h-full">
-      <div className="flex w-full pb-10 pt-10 flex-col order-1">
+      <AOSWrapper />
+      <div
+        data-aos="fade-right"
+        className="flex w-full pb-10 pt-10 flex-col order-1"
+      >
         <span className="text-neutral-400 text-xs mb-4 bg-neutral-800 w-max uppercase p-3">
           About
         </span>
         <h1 className="text-white font-extrabold text-3xl">About Me</h1>
       </div>
-      <div className="flex flex-row gap-10 order-2">
+      <div data-aos="fade-right" className="flex flex-row gap-10 order-2">
         <TiltedCard
           imageSrc="/images/profile2.jpg"
           containerHeight="300px"
@@ -120,7 +125,10 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col order-4 items-center bg-transparent justify-center gap-10 mt-20 mb-20 pb-10 pt-10 rounded-xl">
+      <div
+        data-aos="fade-right"
+        className="flex flex-col order-4 items-center bg-transparent justify-center gap-10 mt-20 mb-20 pb-10 pt-10 rounded-xl"
+      >
         <div className="flex gap-10 flex-row">
           <AnimatedCircle label="Next.js" value={90} />
           <AnimatedCircle label="React.js" value={86} />
@@ -136,7 +144,10 @@ export default function About() {
         </div>
       </div>
       <div className="flex gap-10 order-5 mb-24 flex-row items-center justify-center">
-        <div className="bg-black h-86 w-2/5 p-10 rounded-3xl flex flex-col">
+        <div
+          data-aos="fade-right"
+          className="bg-black h-86 w-2/5 p-10 rounded-3xl flex flex-col"
+        >
           <h1 className="text-white text-left border-b-[0.5] pb-1">
             Development Tools
           </h1>
@@ -167,7 +178,10 @@ export default function About() {
             </li>
           </ul>
         </div>
-        <div className="bg-black h-86 w-[45%] p-10 rounded-3xl">
+        <div
+          data-aos="fade-left"
+          className="bg-black h-86 w-[45%] p-10 rounded-3xl"
+        >
           <h1 className="text-white text-left border-b-[0.5] pb-1">
             Interests
           </h1>
@@ -203,9 +217,12 @@ export default function About() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-row order-3 bg-black justify-evenly gap-10 mt-24 px-6 py-12 rounded-xl">
+      <div
+        data-aos="fade-right"
+        className="flex flex-row order-3 bg-black justify-evenly gap-10 mt-24 px-6 py-12 rounded-xl"
+      >
         <div className="flex flex-col">
-          <h1 className="text-white font-bold pb-1 text-xl">Education</h1>
+          <h1 className="text-white font-bold text-xl">Education</h1>
           <div className="flex flex-col h-full items-center justify-center">
             <span className="text-white font-bold text-lg px-4 py-3 rounded-full">
               2020 - 2025
@@ -221,69 +238,59 @@ export default function About() {
           </div>
         </div>
         <div className="flex flex-col">
-          <h1 className="text-white font-bold pb-1 text-xl">Experience</h1>
-          <div className="flex flex-row items-center justify-center mt-10 pr-4 gap-5">
-            <span className="text-neutral-400 text-sm bg-neutral-800 px-4 py-2 rounded-full">
-              2020 - 2025
+          <h1 className="text-white font-bold text-xl">Experience</h1>
+          <div className="flex flex-row items-center mt-10 gap-5">
+            <span className="text-neutral-400 text-sm bg-neutral-900 px-5 py-3 rounded-full">
+              2024 (Jul - Oct)
             </span>
             <div>
-              <span className="text-white block">
-                University of Western Macedonia
-              </span>
+              <span className="text-white block">Omega Systems</span>
               <span className="text-neutral-400 text-[13px] block">
-                BSc in Computer Science
+                Web Developer - Internship
               </span>
             </div>
           </div>
-          <div className="flex flex-row items-center justify-center mt-10 pr-4 gap-5">
-            <span className="text-neutral-400 text-sm bg-neutral-800 px-4 py-2 rounded-full">
-              2020 - 2025
+          <div className="flex flex-row items-center mt-10 gap-5">
+            <span className="text-neutral-400 text-sm bg-neutral-900 px-4 py-3 rounded-full">
+              2024 (Jan - Nov)
             </span>
             <div>
-              <span className="text-white block">
-                University of Western Macedonia
-              </span>
+              <span className="text-white block">CineGame Critic website</span>
               <span className="text-neutral-400 text-[13px] block">
-                BSc in Computer Science
+                Next.js FullStack Application
               </span>
             </div>
           </div>
-          <div className="flex flex-row items-center justify-center mt-10 pr-4 gap-5">
-            <span className="text-neutral-400 text-sm bg-neutral-800 px-4 py-2 rounded-full">
-              2020 - 2025
+          <div className="flex flex-row items-center mt-10 gap-5">
+            <span className="text-neutral-400 text-sm bg-neutral-900 px-4 py-3 rounded-full">
+              2024 (Oct - Dec)
             </span>
             <div>
-              <span className="text-white block">
-                University of Western Macedonia
-              </span>
+              <span className="text-white block">Set Website</span>
               <span className="text-neutral-400 text-[13px] block">
-                BSc in Computer Science
+                FullStack Web Developer
               </span>
             </div>
           </div>
-          <div className="flex flex-row items-center justify-center mt-10 pr-4 gap-5">
-            <span className="text-neutral-400 text-sm bg-neutral-800 px-4 py-2 rounded-full">
-              2020 - 2025
+          <div className="flex flex-row items-center mt-10 gap-5">
+            <span className="text-neutral-400 text-sm bg-neutral-900 px-4 py-3 rounded-full">
+              2023 (Oct - Dec)
             </span>
             <div>
-              <span className="text-white block">
-                University of Western Macedonia
-              </span>
+              <span className="text-white block">Boston Kitchen Website</span>
               <span className="text-neutral-400 text-[13px] block">
-                BSc in Computer Science
+                Web Designer
               </span>
             </div>
           </div>
-          <div className="flex flex-row items-center justify-center mt-10 pr-4 gap-5">
-            <span className="text-neutral-400 text-sm bg-neutral-800 px-4 py-2 rounded-full">
-              2020 - 2025
+          <div className="flex flex-row items-center mt-10 gap-5">
+            <span className="text-neutral-400 text-sm bg-neutral-900 px-4 py-3 rounded-full">
+              2023 (Sep - Oct)
             </span>
             <div>
-              <span className="text-white block">
-                University of Western Macedonia
-              </span>
+              <span className="text-white block">Nekenergy Website</span>
               <span className="text-neutral-400 text-[13px] block">
-                BSc in Computer Science
+                Web Developer
               </span>
             </div>
           </div>

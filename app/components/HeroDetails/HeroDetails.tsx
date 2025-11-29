@@ -3,11 +3,13 @@ import styles from "./HeroDetails.module.css";
 import TextType from "../TextAnimation/TextType";
 import { FaInstagram, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { FaXTwitter, FaGithub } from "react-icons/fa6";
+import AOSWrapper from "../AOSWrapper/AOSWrapper";
 
 export default function HeroDetails() {
   return (
     <div className="bg-neutral-900 flex items-center justify-center h-screen w-full">
-      <div className="flex flex-row">
+      <AOSWrapper />
+      <div data-aos="fade-right" className="flex flex-row">
         <div className={`${styles.imageWrapper} mr-16`}>
           <Image
             src={"/images/profile2.jpg"}
@@ -73,7 +75,6 @@ export default function HeroDetails() {
           </div>
         </div>
       </div>
-      <div></div>
     </div>
   );
 }
