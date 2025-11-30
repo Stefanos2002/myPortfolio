@@ -125,22 +125,21 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div
-        data-aos="fade-right"
-        className="flex flex-col order-4 items-center bg-transparent justify-center gap-10 mt-20 mb-20 pb-10 pt-10 rounded-xl"
-      >
-        <div className="flex gap-10 flex-row">
-          <AnimatedCircle label="Next.js" value={90} />
-          <AnimatedCircle label="React.js" value={86} />
-          <AnimatedCircle label="Typescript" value={83} />
-          <AnimatedCircle label="Javascript" value={80} />
-        </div>
-        <div className="flex gap-10 flex-row">
-          <AnimatedCircle label="Tailwind" value={95} />
-          <AnimatedCircle label="HTML" value={95} />
-          <AnimatedCircle label="Node.js" value={78} />
-          <AnimatedCircle label="MongoDB" value={76} />
-          <AnimatedCircle label="Wordpress" value={73} />
+      <div data-aos="fade-right" className="flex flex-row order-4 w-full">
+        <div className="flex flex-col items-center justify-center gap-10 mt-20 mb-20 pb-10 pt-10 rounded-xl">
+          <div className="flex gap-10 flex-row">
+            <AnimatedCircle label="Next.js" value={90} />
+            <AnimatedCircle label="React.js" value={86} />
+            <AnimatedCircle label="Typescript" value={83} />
+            <AnimatedCircle label="Javascript" value={80} />
+          </div>
+          <div className="flex gap-10 flex-row">
+            <AnimatedCircle label="Tailwind" value={95} />
+            <AnimatedCircle label="HTML" value={95} />
+            <AnimatedCircle label="Node.js" value={78} />
+            <AnimatedCircle label="MongoDB" value={76} />
+            <AnimatedCircle label="Wordpress" value={73} />
+          </div>
         </div>
       </div>
       <div className="flex gap-10 order-5 mb-24 flex-row items-center justify-center">

@@ -25,8 +25,8 @@ export default function Services() {
             Web Design
           </h1>
           <p className="text-neutral-400 text-[15px]">
-            Crafting clean, modern, and visually appealing layouts tailored to
-            client needs while ensuring both aesthetics and usability.
+            Crafting modern, and visually appealing layouts tailored to client
+            needs while ensuring both aesthetics and usability.
           </p>
           <span className="uppercase text-[13px] text-neutral-200 font-medium">
             Read More
@@ -51,13 +51,10 @@ export default function Services() {
           <span className="text-neutral-200 bg-neutral-600 w-max p-4 px-5 text-md font-semibold rounded-full">
             03
           </span>
-          <h1 className="text-neutral-200 font-extrabold text-lg">
-            WordPress Development
-          </h1>
+          <h1 className="text-neutral-200 font-extrabold text-lg">WordPress</h1>
           <p className="text-neutral-400 text-[15px]">
-            Customizing themes, implementing new features, optimizing design,
-            managing databases, and improving website functionality on
-            WordPress.
+            Building custom themes, adding features, optimizing design, and
+            enhancing WordPress performance.
           </p>
           <span className="uppercase text-[13px] text-neutral-200 font-medium">
             Read More
@@ -72,7 +69,7 @@ export default function Services() {
           </h1>
           <p className="text-neutral-400 text-[15px]">
             Ensuring seamless user experiences across all devices with fully
-            responsive, mobile-friendly layouts and animations.
+            responsive, mobile-friendly layouts.
           </p>
           <span className="uppercase text-[13px] text-neutral-200 font-medium">
             Read More
@@ -86,7 +83,7 @@ export default function Services() {
             Website Maintenance
           </h1>
           <p className="text-neutral-400 text-[15px]">
-            Providing ongoing updates, bug fixes, content changes, and overall
+            Providing updates, bug fixes, content changes, and overall
             optimization to keep websites fast and reliable.
           </p>
           <span className="uppercase text-[13px] text-neutral-200 font-medium">
@@ -98,7 +95,7 @@ export default function Services() {
             06
           </span>
           <h1 className="text-neutral-200 font-extrabold text-lg">
-            DNS, Database & Technical Support
+            DNS & Database
           </h1>
           <p className="text-neutral-400 text-[15px]">
             Managing DNS records, configuring domains, and handling database
