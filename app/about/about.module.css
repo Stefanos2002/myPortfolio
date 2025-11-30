@@ -28,3 +28,25 @@
     transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
   }
 }
+
+.fade::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 2px; /* border thickness */
+  background: white; /* border color */
+
+  /* fade at top and bottom */
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+
+  pointer-events: none;
+}

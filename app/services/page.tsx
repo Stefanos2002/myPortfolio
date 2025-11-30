@@ -1,4 +1,5 @@
 import AOSWrapper from "../components/AOSWrapper/AOSWrapper";
+import styles from "./services.module.css";
 
 export default function Services() {
   return (
@@ -17,8 +18,10 @@ export default function Services() {
         data-aos="flip-down"
         className="grid grid-cols-3 gap-10 order-2 mb-24"
       >
-        <div className="bg-neutral-700 rounded-xl p-8 gap-5 h-80 flex flex-col justify-center">
-          <span className="text-neutral-200 bg-neutral-600 w-max p-4 px-5 text-md font-semibold rounded-full">
+        <div
+          className={`bg-neutral-700 ${styles.jump} cursor-pointer group rounded-xl p-8 gap-5 h-80 flex flex-col justify-center`}
+        >
+          <span className="text-neutral-200 group-hover:bg-neutral-500 transition-all duration-300 bg-neutral-600 w-max p-4 px-5 text-md font-semibold rounded-full">
             01
           </span>
           <h1 className="text-neutral-200 font-extrabold text-lg">
@@ -28,9 +31,15 @@ export default function Services() {
             Crafting modern, and visually appealing layouts tailored to client
             needs while ensuring both aesthetics and usability.
           </p>
-          <span className="uppercase text-[13px] text-neutral-200 font-medium">
-            Read More
-          </span>
+          <h3 className="uppercase text-[13px] text-neutral-200 font-bold">
+            <span>R</span>
+            <span>E</span>
+            <span>A</span>
+            <span>D</span> <span>M</span>
+            <span>O</span>
+            <span>R</span>
+            <span>E</span>
+          </h3>
         </div>
         <div className="bg-neutral-700 rounded-xl p-8 gap-5 h-80 flex flex-col justify-center">
           <span className="text-neutral-200 bg-neutral-600 w-max p-4 px-5 text-md font-semibold rounded-full">

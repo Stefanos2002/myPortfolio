@@ -125,8 +125,16 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div data-aos="fade-right" className="flex flex-row order-4 w-full">
-        <div className="flex flex-col items-center justify-center gap-10 mt-20 mb-20 pb-10 pt-10 rounded-xl">
+      <div
+        data-aos="fade-right"
+        className="flex flex-row order-4 mt-20 mb-20 pb-10 pt-10 justify-center items-center"
+      >
+        <h1 className="text-2xl font-extrabold text-white mr-10">
+          Developer Skills
+        </h1>
+        <div
+          className={`flex flex-col relative items-center justify-center gap-10 ${styles.fade} pl-10`}
+        >
           <div className="flex gap-10 flex-row">
             <AnimatedCircle label="Next.js" value={90} />
             <AnimatedCircle label="React.js" value={86} />
