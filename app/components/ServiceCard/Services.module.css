@@ -3,7 +3,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
   100% {
     transform: translateY(0);
@@ -12,7 +12,7 @@
 
 /* Trigger when parent .group is hovered */
 .jump:hover h3 span {
-  animation: move-out 0.6s ease infinite;
+  animation: move-out 0.6s ease;
 }
 .jump h3 span {
   display: inline-block;
