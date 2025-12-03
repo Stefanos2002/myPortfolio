@@ -1,4 +1,4 @@
-import HeroDetails from "./components/HeroDetails/HeroDetails";
+import HeroDetails from "./components/ProfileDetails/HeroDetails";
 export default function Home() {
   return <HeroDetails />;
 }

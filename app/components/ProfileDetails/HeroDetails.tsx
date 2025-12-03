@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from "./HeroDetails.module.css";
-import TextType from "../TextAnimation/TextType";
+import TextType from "../Animations/TextAnimation/TextType";
 import { FaInstagram, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { FaXTwitter, FaGithub } from "react-icons/fa6";
-import AOSWrapper from "../AOSWrapper/AOSWrapper";
+import AOSWrapper from "../Animations/AOSWrapper/AOSWrapper";
 
 export default function HeroDetails() {
   return (

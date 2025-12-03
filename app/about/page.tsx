@@ -1,10 +1,10 @@
-import AnimatedCircle from "../components/AnimatedCircle/AnimatedCircle";
+import AnimatedCircle from "../components/Animations/AnimatedCircle/AnimatedCircle";
 import "react-circular-progressbar/dist/styles.css";
-import TiltedCard from "../components/TiltedCard/TiltedCard";
+import TiltedCard from "../components/Animations/TiltedCard/TiltedCard";
 import { FaCheckCircle } from "react-icons/fa";
 import { GiLightBulb } from "react-icons/gi";
 import styles from "./about.module.css";
-import AOSWrapper from "../components/AOSWrapper/AOSWrapper";
+import AOSWrapper from "../components/Animations/AOSWrapper/AOSWrapper";
 
 export default function About() {
   return (
