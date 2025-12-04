@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AOSWrapper from "../../Animations/AOSWrapper/AOSWrapper";
 import styles from "./ServiceClient.module.css";
 import Image from "next/image";
@@ -45,6 +45,22 @@ export default function ServiceClient({ data }: { data: ServiceData[] }) {
     setModalData({ image, title, intro, qualifications, focus });
     setOpen(true);
   };
+
+  // Handle ESC key to close modal
+  useEffect(() => {
+    if (!open) return; // only attach listener if modal is open
+
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    window.addEventListener("keydown", handleEsc);
+    return () => {
+      window.removeEventListener("keydown", handleEsc); // cleanup
+    };
+  }, [open]);
 
   return (
     <>

@@ -20,7 +20,7 @@ export default function HeroDetails() {
           />
         </div>
         <div className="flex w-lg justify-center flex-col">
-          <h1 className="uppercase text-white text-4xl font-black tracking-[2px]">
+          <h1 className="uppercase text-white text-4xl font-black">
             Stefanos Kaloulis
           </h1>
           <h2 className="text-white text-xl pt-4 pb-4">

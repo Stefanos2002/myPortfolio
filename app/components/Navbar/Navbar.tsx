@@ -19,7 +19,7 @@ export default function Navbar() {
           <Link href={"#portfolio"}>Portfolio</Link>
         </li>
         <li>
-          <Link href={"#contact"}>Contact</Link>
+          <Link href={"/contact"}>Contact</Link>
         </li>
       </ul>
       <div className="text-neutral-400 text-left italic mr-4">

@@ -127,3 +127,15 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px rgb(41, 41, 54) inset;
+    -webkit-text-fill-color: rgb(255 255 255);
+  }
+}

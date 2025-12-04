@@ -40,13 +40,8 @@ export default function About() {
           }
           overlayBackContent={
             <>
-              <div className="flex flex-col items-center">
-                <h2 className="uppercase w-max p-1 px-2 mb-2 text-neutral-400 text-xs text-center bg-neutral-800">
-                  Details
-                </h2>
-              </div>
-              <ul className="text-sm flex flex-col pt-0 pr-4 pl-4 pb-5 gap-3">
-                <li className="flex flex-row justify-between border-b-[0.5px] rounded-md tracking-wide">
+              <ul className="text-sm justify-center items-stretch flex flex-col pt-0 pr-4 pl-4 pb-5 gap-3">
+                <li className="flex flex-row justify-between border-b-[0.5px] pb-1 rounded-sm">
                   <span className="text-white font-bold cursor-auto">
                     Fullname:
                   </span>
@@ -54,11 +49,11 @@ export default function About() {
                     Stefanos Kaloulis
                   </span>
                 </li>
-                <li className="flex flex-row justify-between border-b-[0.5px] rounded-md tracking-wide">
+                <li className="flex flex-row justify-between border-b-[0.5px] pb-1 rounded-sm">
                   <span className="text-white font-bold cursor-auto">Age:</span>
                   <span className="text-neutral-300 cursor-auto">22</span>
                 </li>
-                <li className="flex flex-row justify-between border-b-[0.5px] rounded-md tracking-wide">
+                <li className="flex flex-row justify-between border-b-[0.5px] pb-1 rounded-sm">
                   <span className="text-white font-bold cursor-auto">
                     Birthdate:
                   </span>
@@ -66,7 +61,7 @@ export default function About() {
                     27/12/2002
                   </span>
                 </li>
-                <li className="flex flex-row justify-between border-b-[0.5px] rounded-md tracking-wide">
+                <li className="flex flex-row justify-between border-b-[0.5px] pb-1 rounded-sm">
                   <span className="text-white font-bold cursor-auto">
                     Address:
                   </span>
@@ -74,7 +69,7 @@ export default function About() {
                     Aretha 9, Patras
                   </span>
                 </li>
-                <li className="flex flex-row justify-between border-b-[0.5px] rounded-md tracking-wide">
+                <li className="flex flex-row justify-between border-b-[0.5px] pb-1 rounded-sm">
                   <span className="text-white font-bold cursor-auto">
                     Email:
                   </span>
@@ -86,7 +81,7 @@ export default function About() {
                     kalouliss@gmail.com
                   </a>
                 </li>
-                <li className="flex flex-row justify-between border-b-[0.5px] rounded-md tracking-wide">
+                <li className="flex flex-row justify-between border-b-[0.5px] pb-1 rounded-sm">
                   <span className="text-white font-bold cursor-pointer">
                     Phone:
                   </span>
@@ -97,7 +92,7 @@ export default function About() {
                     +30 698 009 0854
                   </a>
                 </li>
-                <li className="flex flex-row justify-between border-b-[0.5px] rounded-md tracking-wide">
+                <li className="flex flex-row justify-between border-b-[0.5px] pb-1 rounded-sm">
                   <span className="text-white font-bold">Nationality:</span>
                   <span className="text-neutral-300">Greek</span>
                 </li>
@@ -105,7 +100,7 @@ export default function About() {
             </>
           }
         />
-        <div className="flex flex-col gap-4 justify-center">
+        <div className="flex flex-col -translate-y-2.5 gap-4 justify-center">
           <p className="text-neutral-300 text-left leading-[1.8rem] text-[15px]">
             Hi, I’m Stefanos Kaloulis, a web developer and Computer Science
             graduate from the University of Western Macedonia.
@@ -129,7 +124,7 @@ export default function About() {
         data-aos="fade-right"
         className="flex flex-row order-4 mt-20 mb-20 pb-10 pt-10 justify-center items-center"
       >
-        <h1 className="text-2xl font-extrabold text-white mr-10">
+        <h1 className="text-xl font-extrabold text-white mr-10">
           Developer Skills
         </h1>
         <div
