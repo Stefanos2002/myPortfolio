@@ -10,12 +10,12 @@ interface Props {
   qualifications?: string[];
   focus?: string;
   onOpen?: (
-    title: string,
     image: string,
+    title: string,
     intro: string,
     qualifications: string[],
     focus: string
-  ) => void; // Added
+  ) => void;
 }
 
 export default function ServiceCard({

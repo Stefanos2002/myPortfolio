@@ -1,5 +1,4 @@
 import AOSWrapper from "../components/Animations/AOSWrapper/AOSWrapper";
-import ServiceCard from "../components/Services/ServiceCard/ServiceCard";
 import ServiceClient from "../components/Services/ServiceClient/ServiceClient";
 
 export default function Services() {
@@ -27,21 +26,57 @@ export default function Services() {
       title: "Web Development",
       description:
         "Building fast, dynamic, and scalable websites using HTML, CSS, JavaScript, React, Next.js, TypeScript, and Tailwind CSS.",
-      intro: "",
+      intro:
+        "I develop dynamic, responsive, and scalable websites using technologies I have mastered through university, personal projects, and my internship at Omega Systems. I specialize in React, Next.js, and TypeScript, and have built full-stack applications such as CineGame Critic, hosted on Vercel.",
+      qualifications: [
+        "Full frontend development with React & Next.js",
+        "Clean, structured code using TypeScript",
+        "API integration (REST, external APIs like RAWG/TMDB)",
+        "Dynamic elements with JavaScript & Bootstrap",
+        "Authentication (NextAuth)",
+        "Performance optimization & SEO-friendly builds",
+      ],
+      image: "/images/web-dev.webp",
+      focus:
+        "Creating user-centric designs that balance aesthetics with functionality.",
     },
     {
       number: "03",
       title: "Wordpress",
       description:
         "Building custom themes, adding features, optimizing design, and enhancing WordPress performance.",
-      intro: "",
+      intro:
+        "I have hands-on experience working with custom WordPress themes, both during my internship and in professional projects like the SET store website. I’ve modified templates, rewritten components, and improved design and functionality through PHP, CSS, JavaScript, and Twig.",
+      qualifications: [
+        "Custom WordPress theme editing (PHP, CSS, Twig)",
+        "Feature development and UI enhancements",
+        "WooCommerce customization",
+        "Dynamic content using PHP & database fields",
+        "Correct enqueueing of scripts & styles for performance",
+        "Speed optimization and responsive improvements",
+      ],
+      image: "/images/wordpress.png",
+      focus:
+        "Delivering optimized, reliable, and visually improved WordPress sites for real businesses.",
     },
     {
       number: "04",
       title: "Responsive Design",
       description:
         "Ensuring seamless user experiences across all devices with fully responsive, mobile-friendly layouts.",
-      intro: "",
+      intro:
+        "I have hands-on experience working with custom WordPress themes, both during my internship and in professional projects like the SET store website. I’ve modified templates, rewritten components, and improved design and functionality through PHP, CSS, JavaScript, and Twig.",
+      qualifications: [
+        "Custom WordPress theme editing (PHP, CSS, Twig)",
+        "Feature development and UI enhancements",
+        "WooCommerce customization",
+        "Dynamic content using PHP & database fields",
+        "Correct enqueueing of scripts & styles for performance",
+        "Speed optimization and responsive improvements",
+      ],
+      image: "/images/responsive.png",
+      focus:
+        "Delivering optimized, reliable, and visually improved WordPress sites for real businesses.",
     },
     {
       number: "05",
@@ -58,6 +93,7 @@ export default function Services() {
       intro: "",
     },
   ];
+
   return (
     <div className="flex relative pt-10 pr-22 pl-20 flex-col w-full h-full">
       <AOSWrapper />
@@ -70,21 +106,7 @@ export default function Services() {
         </span>
         <h1 className="text-white font-extrabold text-3xl">What I Do</h1>
       </div>
-
-      <ServiceClient>
-        {data.map((item) => (
-          <ServiceCard
-            key={item.number}
-            number={item.number}
-            title={item.title}
-            description={item.description}
-            image={item.image}
-            intro={item.intro}
-            qualifications={item.qualifications || []}
-            focus={item.focus}
-          />
-        ))}
-      </ServiceClient>
+      <ServiceClient data={data} />
     </div>
   );
 }

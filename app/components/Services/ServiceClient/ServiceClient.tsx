@@ -1,22 +1,21 @@
 "use client";
-import { useState, cloneElement, ReactElement } from "react";
+import { useState } from "react";
 import AOSWrapper from "../../Animations/AOSWrapper/AOSWrapper";
 import styles from "./ServiceClient.module.css";
 import Image from "next/image";
+import ServiceCard from "../ServiceCard/ServiceCard";
 
-export default function ServiceClient({
-  children,
-}: {
-  children: ReactElement<{
-    onOpen?: (
-      image: string,
-      title: string,
-      intro: string,
-      qualifications: string[],
-      focus: string
-    ) => void;
-  }>[];
-}) {
+interface ServiceData {
+  number: string;
+  title: string;
+  description: string;
+  intro: string;
+  image?: string;
+  qualifications?: string[];
+  focus?: string;
+}
+
+export default function ServiceClient({ data }: { data: ServiceData[] }) {
   const [open, setOpen] = useState(false);
   const [animateOut, setAnimateOut] = useState(false);
 
@@ -32,7 +31,7 @@ export default function ServiceClient({
     image: "",
     title: "",
     intro: "",
-    qualifications: [""],
+    qualifications: [] as string[],
     focus: "",
   });
 
@@ -54,11 +53,19 @@ export default function ServiceClient({
         data-aos="flip-down"
         className="grid grid-cols-3 gap-10 order-2 mb-24"
       >
-        {children.map((child) =>
-          cloneElement(child, {
-            onOpen: openModal, // inject handler into each server card
-          })
-        )}
+        {data.map((item, index) => (
+          <ServiceCard
+            key={`${index}-${item.title}`}
+            number={item.number}
+            title={item.title}
+            description={item.description}
+            image={item.image}
+            intro={item.intro}
+            qualifications={item.qualifications || []}
+            focus={item.focus}
+            onOpen={openModal} // Directly pass the handler
+          />
+        ))}
       </div>
 
       {/* OVERLAY */}
@@ -73,11 +80,11 @@ export default function ServiceClient({
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-neutral-900 text-neutral-200 p-10 rounded-2xl w-2/3 h-3/4 overflow-y-scroll relative"
+            className={`bg-neutral-900 text-neutral-200 p-10 rounded-2xl w-3/5 h-3/4 overflow-y-auto ${styles.scrollbar} relative`}
           >
             <button
               onClick={closeModal}
-              className={`absolute top-3 right-5 text-xl border rounded-full px-[10px] py-1 cursor-pointer ${styles.bounce}`}
+              className={`absolute top-3 right-5 text-xl border rounded-full px-2.5 py-1 cursor-pointer ${styles.bounce}`}
             >
               ✕
             </button>
@@ -93,11 +100,13 @@ export default function ServiceClient({
             )}
             <p className="text-neutral-400 mb-6">{modalData.intro}</p>
             <h2 className="mb-2">What I Offer</h2>
-            <ul className="mb-6 list-disc text-neutral-400">
-              {modalData.qualifications?.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
+            {modalData.qualifications.length > 0 && (
+              <ul className="mb-6 list-disc text-neutral-400">
+                {modalData.qualifications?.map((item) => (
+                  <li key={`${modalData.title}-${item}`}>{item}</li>
+                ))}
+              </ul>
+            )}
             <h2>My Focus</h2>
             <p className="text-neutral-400 mt-2">{modalData.focus}</p>
           </div>

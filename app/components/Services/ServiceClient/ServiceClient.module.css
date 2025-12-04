@@ -33,3 +33,23 @@
     transform: scale(0.97);
   }
 }
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: var(--color-neutral-700);
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(159, 157, 157);
+    border-radius: 100vh;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #c0a0b9;
+  }
+}
