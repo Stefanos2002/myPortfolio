@@ -101,8 +101,8 @@ export default function About() {
         <div className="flex flex-col gap-3 justify-center">
           <p className="text-neutral-300 text-left leading-[1.7rem] text-[16px]">
             Hi, I’m Stefanos Kaloulis, a web developer that lives in Patras,
-            Greece. I'm also a Computer Science graduate from the University of
-            Western Macedonia.
+            Greece. I&aposm also a Computer Science graduate from the University
+            of Western Macedonia.
           </p>
           <p className="text-neutral-300 text-left leading-[1.7rem] text-[16px]">
             I’m fluent in English and passionate about creating clean,
