@@ -79,7 +79,7 @@ export default function CardContainer() {
       <main
         data-aos="fade-up"
         ref={container}
-        className="relative flex order-2 w-full flex-col items-center justify-center pb-[60vh]"
+        className="relative flex order-2 w-full flex-col items-center justify-center pb-[50vh]"
       >
         {/* <div className="absolute left-1/2 top-[10%] grid -translate-x-1/2 content-start justify-items-center gap-6 text-center">
           <span className="after:from-background after:to-foreground relative max-w-[12ch] text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-gradient-to-b after:content-['']">
