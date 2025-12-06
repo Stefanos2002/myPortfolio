@@ -3,13 +3,13 @@
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import ReactLenis from "lenis/react";
 import { useRef } from "react";
-import Image from "next/image";
 import AOSWrapper from "../AOSWrapper/AOSWrapper";
+import SplitText from "../SplitText";
 
 const projects = [
   {
-    title: "Project 1",
-    src: "/images/database2.png",
+    title: "Cinegame Critic",
+    src: "/videos/CGC.mp4",
   },
   {
     title: "Project 2",
@@ -56,11 +56,19 @@ const Card = ({
       <motion.div
         style={{
           scale,
-          top: `calc(-10vh + ${i * 20 + 250}px)`,
+          top: `calc(-25vh + ${i * 20 + 250}px)`,
         }}
-        className="rounded-4xl relative -top-1/4 flex h-120 w-[60vw] origin-top flex-col overflow-hidden"
+        className="rounded-4xl relative -top-1/4 flex h-134 w-[60vw] origin-top flex-col overflow-hidden"
       >
-        <Image src={src} alt={title} fill className="object-cover" />
+        {/* <Image src={src} alt={title} fill className="object-cover" /> */}
+        <video
+          src={src}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        />
       </motion.div>
     </div>
   );
@@ -79,13 +87,29 @@ export default function CardContainer() {
       <main
         data-aos="fade-up"
         ref={container}
-        className="relative flex order-2 w-full flex-col items-center justify-center pb-[50vh]"
+        className="relative flex order-2 w-full flex-col items-center justify-center pb-[38vh]"
       >
         {/* <div className="absolute left-1/2 top-[10%] grid -translate-x-1/2 content-start justify-items-center gap-6 text-center">
           <span className="after:from-background after:to-foreground relative max-w-[12ch] text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-gradient-to-b after:content-['']">
             scroll down to see card stack
           </span>
         </div> */}
+        {/* <h1 className="text-white text-2xl mt-20 flex">
+          Browse My Latest Creations
+        </h1> */}
+        <SplitText
+          text="Browse My Latest Creations"
+          className="text-2xl text-center mt-20 p-5 px-8 border-[0.5] text-white"
+          delay={70}
+          duration={0.3}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+        />
         {projects.map((project, i) => {
           const targetScale = Math.max(
             0.5,
