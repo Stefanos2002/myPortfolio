@@ -16,7 +16,7 @@ export default function Navbar() {
           <Link href={"/services"}>My Services</Link>
         </li>
         <li>
-          <Link href={"#portfolio"}>Portfolio</Link>
+          <Link href={"/portfolio"}>Portfolio</Link>
         </li>
         <li>
           <Link href={"/contact"}>Contact</Link>

@@ -24,16 +24,56 @@ export async function POST(req: NextRequest) {
       subject: `New Contact Form Message from ${name ?? email}`,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`, // fallback
       html: `
-    <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
-      <h2 style="color: #1f2937;">New Contact Form Submission</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Message:</strong></p>
-      <p style="background-color: #ffffff; padding: 10px; border-radius: 4px; border: 1px solid #ccc;">${message}</p>
-      <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
-      <p style="font-size: 12px; color: #888;">This message was sent from your website contact form.</p>
-    </div>
-  `,
+<div style="
+  line-height: 1.5;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #e0e0e0;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: rgb(63,65,82);
+  font-size: 15px;
+">
+  <!-- Import Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+  <h1 style="color:#ffffff; font-weight:300; font-size:22px; margin-bottom:15px;">
+    New Contact Form Submission
+  </h1>
+
+  <p style="font-size:15px; margin:8px 0;">
+    <strong style="margin-right:5px; color:#ffffff; font-size:15px;">Name:</strong>
+    <span style="font-style:italic; color:#e0e0e0; font-size:15px;">${name}</span>
+  </p>
+
+  <p style="font-size:15px; margin:8px 0;">
+    <strong style="margin-right:5px; color:#ffffff; font-size:15px;">Email:</strong>
+    <a href="mailto:${email}"
+       style="
+         font-size:15px;
+         font-style:italic;
+         color:#e0e0e0 !important;
+         text-decoration: underline;
+         -webkit-text-fill-color:#e0e0e0;
+       "
+    >
+      ${email}
+    </a>
+  </p>
+
+  <hr style="border:none; border-top:1px solid #4f5162; margin:20px 0;" />
+
+  <p style="font-size:15px; color:#e0e0e0; margin:8px 0;">
+    ${message}
+  </p>
+
+  <hr style="border:none; border-top:1px solid #4f5162; margin:20px 0;" />
+
+  <p style="font-size:12px; color:#bfbfbf; margin-top:15px;">
+    This message was sent from your portfolio contact form.
+  </p>
+</div>`,
     });
 
     return NextResponse.json({ success: true });

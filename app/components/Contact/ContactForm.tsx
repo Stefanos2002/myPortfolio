@@ -77,7 +77,9 @@ export default function ContactForm() {
         >
           Send Message
         </button>
-        {status && <p className="mt-2 text-white">{status}</p>}
+        {status && (
+          <p className="mt-4 text-sm font-medium text-white">{status}</p>
+        )}
       </form>
     </>
   );

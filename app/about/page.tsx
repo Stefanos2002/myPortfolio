@@ -22,10 +22,10 @@ export default function About() {
       <div data-aos="fade-right" className="flex flex-row gap-10 order-2">
         <TiltedCard
           imageSrc="/images/profile2.jpg"
-          containerHeight="300px"
+          containerHeight="305px"
           containerWidth="300px"
-          imageHeight="300px"
-          imageWidth="300px"
+          imageHeight="310px"
+          imageWidth="330px"
           rotateAmplitude={6}
           scaleOnHover={1.05}
           showMobileWarning={false}
@@ -40,37 +40,31 @@ export default function About() {
           }
           overlayBackContent={
             <>
-              <ul className="text-sm justify-center items-stretch flex flex-col pt-0 pr-4 pl-4 pb-5 gap-3">
-                <li className="flex flex-row justify-between border-b-[0.5px] pb-1 rounded-sm">
-                  <span className="text-white font-bold cursor-auto">
+              <ul className="text-sm justify-center items-stretch flex flex-col pt-4 pr-4 pl-4 pb-5 gap-4">
+                <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
+                  <span className="text-white font-bold text-[15px] cursor-auto">
                     Fullname:
                   </span>
                   <span className="text-neutral-300 cursor-auto">
                     Stefanos Kaloulis
                   </span>
                 </li>
-                <li className="flex flex-row justify-between border-b-[0.5px] pb-1 rounded-sm">
-                  <span className="text-white font-bold cursor-auto">Age:</span>
+                <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
+                  <span className="text-white text-[15px] font-bold cursor-auto">
+                    Age:
+                  </span>
                   <span className="text-neutral-300 cursor-auto">22</span>
                 </li>
-                <li className="flex flex-row justify-between border-b-[0.5px] pb-1 rounded-sm">
-                  <span className="text-white font-bold cursor-auto">
+                <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
+                  <span className="text-white text-[15px] font-bold cursor-auto">
                     Birthdate:
                   </span>
                   <span className="text-neutral-300 cursor-auto">
                     27/12/2002
                   </span>
                 </li>
-                <li className="flex flex-row justify-between border-b-[0.5px] pb-1 rounded-sm">
-                  <span className="text-white font-bold cursor-auto">
-                    Address:
-                  </span>
-                  <span className="text-neutral-300 cursor-auto">
-                    Aretha 9, Patras
-                  </span>
-                </li>
-                <li className="flex flex-row justify-between border-b-[0.5px] pb-1 rounded-sm">
-                  <span className="text-white font-bold cursor-auto">
+                <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
+                  <span className="text-white text-[15px] font-bold cursor-auto">
                     Email:
                   </span>
                   <a
@@ -81,8 +75,8 @@ export default function About() {
                     kalouliss@gmail.com
                   </a>
                 </li>
-                <li className="flex flex-row justify-between border-b-[0.5px] pb-1 rounded-sm">
-                  <span className="text-white font-bold cursor-pointer">
+                <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
+                  <span className="text-white text-[15px] font-bold cursor-pointer">
                     Phone:
                   </span>
                   <a
@@ -92,20 +86,25 @@ export default function About() {
                     +30 698 009 0854
                   </a>
                 </li>
-                <li className="flex flex-row justify-between border-b-[0.5px] pb-1 rounded-sm">
-                  <span className="text-white font-bold">Nationality:</span>
-                  <span className="text-neutral-300">Greek</span>
+                <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
+                  <span className="text-white text-[15px] font-bold">
+                    Work:
+                  </span>
+                  <span className="text-neutral-300">
+                    Remote/On-site/Hybrid
+                  </span>
                 </li>
               </ul>
             </>
           }
         />
-        <div className="flex flex-col -translate-y-2.5 gap-4 justify-center">
-          <p className="text-neutral-300 text-left leading-[1.8rem] text-[15px]">
-            Hi, I’m Stefanos Kaloulis, a web developer and Computer Science
-            graduate from the University of Western Macedonia.
+        <div className="flex flex-col gap-3 justify-center">
+          <p className="text-neutral-300 text-left leading-[1.7rem] text-[16px]">
+            Hi, I’m Stefanos Kaloulis, a web developer that lives in Patras,
+            Greece. I'm also a Computer Science graduate from the University of
+            Western Macedonia.
           </p>
-          <p className="text-neutral-300 text-left leading-[1.8rem] text-[15px]">
+          <p className="text-neutral-300 text-left leading-[1.7rem] text-[16px]">
             I’m fluent in English and passionate about creating clean,
             functional, and visually appealing websites. I’ve worked extensively
             with HTML, CSS, JavaScript, and TypeScript, and I enjoy building
@@ -114,7 +113,7 @@ export default function About() {
             everything from theme customization to plugin integration and site
             optimization.
           </p>
-          <p className="text-neutral-300 text-left leading-[1.8rem] text-[15px]">
+          <p className="text-neutral-300 text-left leading-[1.7rem] text-[16px]">
             I love bringing ideas to life on the web and am always exploring new
             tools and techniques to make my projects even better.
           </p>
