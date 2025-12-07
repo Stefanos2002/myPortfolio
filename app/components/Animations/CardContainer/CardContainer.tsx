@@ -10,28 +10,30 @@ const projects = [
   {
     title: "Cinegame Critic",
     src: "/videos/CGC.mp4",
+    link: "https://www.cinegame-critic.com/",
   },
   {
-    title: "Project 2",
-    src: "/images/profile2.jpg",
+    title: "SET",
+    src: "/videos/SET.mp4",
   },
   {
-    title: "Project 3",
-    src: "/images/responsive2.png",
+    title: "IGNITE",
+    src: "/videos/IGNITE.mp4",
   },
   {
-    title: "Project 4",
-    src: "/images/wordpress.png",
+    title: "Boston Kitchen",
+    src: "/videos/BOSTON.mp4",
   },
   {
-    title: "Project 5",
-    src: "/images/web-design.jpeg",
+    title: "Nekenergy",
+    src: "/videos/NEK.mp4",
   },
 ];
 
 const Card = ({
   i,
   title,
+  link,
   src,
   progress,
   range,
@@ -39,6 +41,7 @@ const Card = ({
 }: {
   i: number;
   title: string;
+  link?: string;
   src: string;
   progress: MotionValue<number>;
   range: [number, number];
@@ -51,7 +54,7 @@ const Card = ({
   return (
     <div
       ref={container}
-      className="sticky top-0 flex items-center justify-center"
+      className="sticky top-0 group flex flex-col items-center justify-center"
     >
       <motion.div
         style={{
@@ -69,6 +72,17 @@ const Card = ({
           playsInline
           className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-black/70 bg-opacity-50 opacity-0 flex flex-col items-center justify-center text-center text-white transition-opacity duration-300 ease-in-out group-hover:opacity-100 rounded-4xl">
+          <h2 className="text-2xl font-semibold mb-4">{title}</h2>
+          {link && (
+            <a
+              href={link}
+              className="px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors"
+            >
+              Live Demo
+            </a>
+          )}
+        </div>
       </motion.div>
     </div>
   );
@@ -89,14 +103,6 @@ export default function CardContainer() {
         ref={container}
         className="relative flex order-2 w-full flex-col items-center justify-center pb-[38vh]"
       >
-        {/* <div className="absolute left-1/2 top-[10%] grid -translate-x-1/2 content-start justify-items-center gap-6 text-center">
-          <span className="after:from-background after:to-foreground relative max-w-[12ch] text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-gradient-to-b after:content-['']">
-            scroll down to see card stack
-          </span>
-        </div> */}
-        {/* <h1 className="text-white text-2xl mt-20 flex">
-          Browse My Latest Creations
-        </h1> */}
         <SplitText
           text="Browse My Latest Creations"
           className="text-2xl text-center mt-20 p-5 px-8 border-[0.5] text-white"
