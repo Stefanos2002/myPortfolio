@@ -9,6 +9,9 @@ html,
 body {
   font-family: var(--font-montserrat);
 }
+html.light body {
+  background-color: white;
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -139,9 +142,16 @@ body {
 }
 
 /* light mode switches */
+/* navbar */
 html:not(.light) #navbar ul li.active {
   color: white;
 }
+html.light #navbar ul li.active,
+html.light #navbar ul li:hover {
+  color: black;
+  font-weight: 700;
+}
+
 /* 
 html.light #navbar ul li:hover {
   color: black;

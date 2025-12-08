@@ -7,23 +7,31 @@ import AOSWrapper from "../Animations/AOSWrapper/AOSWrapper";
 
 export default function HeroDetails() {
   return (
-    <div className="bg-neutral-900 flex items-center justify-center h-screen w-full">
+    <div className="bg-neutral-900 light:bg-stone-200 flex items-center justify-center h-screen w-full">
       <AOSWrapper />
       <div data-aos="fade-right" className="flex flex-row">
         <div className={`${styles.imageWrapper} mr-16`}>
           <Image
-            src={"/images/profile2.jpg"}
+            src={"/images/profileDark.jpg"}
             alt="hero_image"
             width={250}
             height={250}
-            className={styles.container}
+            className={`${styles.container} block light:hidden`}
+          />
+
+          <Image
+            src={"/images/profileLight.jpg"}
+            alt="hero_image"
+            width={250}
+            height={250}
+            className={`${styles.container} hidden light:block`}
           />
         </div>
         <div className="flex w-lg justify-center flex-col">
-          <h1 className="uppercase text-white text-4xl font-black">
+          <h1 className="uppercase text-white light:text-black light:font-extrabold text-4xl font-black">
             Stefanos Kaloulis
           </h1>
-          <h2 className="text-white text-xl pt-4 pb-4">
+          <h2 className="text-white light:text-black text-xl pt-4 pb-4">
             <TextType
               text={[
                 "React Developer",
@@ -37,11 +45,11 @@ export default function HeroDetails() {
               cursorCharacter="|"
             />
           </h2>
-          <p className="text-neutral-400">
+          <p className="text-neutral-400 light:text-black">
             Web Developer crafting sleek, responsive experiences from Patras,
             Greece.
           </p>
-          <div className="text-white flex flex-row -translate-x-3 mt-6 text-lg">
+          <div className="text-white light:text-black flex flex-row -translate-x-3 mt-6 text-lg">
             <a
               href="https://www.facebook.com/stefanos.kaloulis/"
               className="hover:-translate-y-2 hover:text-neutral-400 p-2 transition-all duration-500"

@@ -8,7 +8,7 @@ import AOSWrapper from "../components/Animations/AOSWrapper/AOSWrapper";
 
 export default function About() {
   return (
-    <div className="flex relative pt-10 pr-22 pl-20 flex-col w-full h-full">
+    <div className="flex relative light:bg-stone-200 pt-10 pr-22 pl-20 flex-col w-full h-full">
       <AOSWrapper />
       <div
         data-aos="fade-right"
