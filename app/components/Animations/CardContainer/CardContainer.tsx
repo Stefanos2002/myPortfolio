@@ -15,18 +15,22 @@ const projects = [
   {
     title: "SET",
     src: "/videos/SET.mp4",
+    link: "https://www.set.gr/",
   },
   {
     title: "IGNITE",
     src: "/videos/IGNITE.mp4",
+    link: "https://ignite.construction/",
   },
   {
     title: "Boston Kitchen",
     src: "/videos/BOSTON.mp4",
+    link: "https://www.bostonkitchen.com/",
   },
   {
     title: "Nekenergy",
     src: "/videos/NEK.mp4",
+    link: "https://nekenergy.gr/",
   },
 ];
 
@@ -73,7 +77,7 @@ const Card = ({
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/70 bg-opacity-50 opacity-0 flex flex-col items-center justify-center text-center text-white transition-opacity duration-300 ease-in-out group-hover:opacity-100 rounded-4xl">
-          <h2 className="text-2xl font-semibold mb-4">{title}</h2>
+          <h2 className="text-xl uppercase font-semibold mb-4">{title}</h2>
           {link && (
             <a
               href={link}
@@ -104,7 +108,7 @@ export default function CardContainer() {
         className="relative flex order-2 w-full flex-col items-center justify-center pb-[38vh]"
       >
         <SplitText
-          text="Browse My Latest Creations"
+          text="Check out some of my past projects"
           className="text-2xl text-center mt-20 p-5 px-8 border-[0.5] text-white"
           delay={70}
           duration={0.3}

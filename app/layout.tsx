@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
+import ThemeToggle from "./components/ToggleTheme/ToggleTheme";
+import { headers } from "next/headers";
 
 const montSerrat = Montserrat({
   variable: "--font-montserrat",
@@ -23,10 +25,12 @@ export default function RootLayout({
       <body
         className={` ${montSerrat.variable} antialiased flex relative bg-neutral-900 flex-row w-full min-h-screen`}
       >
-        <div className="relative h-full w-sm">
-          <Navbar />
+        <Navbar />
+        <div className="flex-1 ml-70">
+          {" "}
+          <ThemeToggle />
+          {children}
         </div>
-        {children}
       </body>
     </html>
   );

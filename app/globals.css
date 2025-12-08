@@ -1,12 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
-/* .font-montserrat {
-  font-family: var(--font-montserrat);
-} */
+/* @custom-variant dark (&:is(.dark *)); */
 /* globals.css */
+@custom-variant light (&:where(.light, .light *));
+
 html,
 body {
   font-family: var(--font-montserrat);
@@ -139,3 +137,13 @@ body {
     -webkit-text-fill-color: rgb(255 255 255);
   }
 }
+
+/* light mode switches */
+html:not(.light) #navbar ul li.active {
+  color: white;
+}
+/* 
+html.light #navbar ul li:hover {
+  color: black;
+  transform: rotate(-7deg);
+} */
