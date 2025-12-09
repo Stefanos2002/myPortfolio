@@ -152,8 +152,12 @@ html.light #navbar ul li:hover {
   font-weight: 700;
 }
 
-/* 
-html.light #navbar ul li:hover {
-  color: black;
-  transform: rotate(-7deg);
-} */
+/* Home */
+html.light .hero_image {
+  background-image: url("/images/profileLight2.jpg");
+}
+
+/* About */
+html.light .tiltcard {
+  --card-img: url("/images/profileLight2.jpg");
+}

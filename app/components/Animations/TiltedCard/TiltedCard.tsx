@@ -10,7 +10,8 @@ import {
 } from "motion/react";
 
 interface TiltedCardProps {
-  imageSrc: React.ComponentProps<"img">["src"];
+  className?: string;
+  imageSrc?: React.ComponentProps<"img">["src"];
   containerHeight?: React.CSSProperties["height"];
   containerWidth?: React.CSSProperties["width"];
   imageHeight?: React.CSSProperties["height"];
@@ -33,6 +34,7 @@ const springValues: SpringOptions = {
 };
 
 export default function TiltedCard({
+  className,
   imageSrc,
   containerHeight = "300px",
   containerWidth = "100%",
@@ -116,7 +118,7 @@ export default function TiltedCard({
   return (
     <figure
       ref={ref}
-      className="relative w-full h-full [perspective:800px] flex flex-col items-center justify-center"
+      className={`relative w-full h-full [perspective:800px] flex flex-col items-center justify-center}`}
       style={{
         height: containerHeight,
         width: containerWidth,
@@ -150,10 +152,16 @@ export default function TiltedCard({
           <motion.img
             src={imageSrc}
             alt={""}
-            className="absolute top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"
+            className={`absolute top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)] ${
+              className ?? ""
+            }`}
             style={{
               width: imageWidth,
               height: imageHeight,
+              backgroundImage: "var(--card-img)",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
             }}
           />
 
@@ -166,7 +174,7 @@ export default function TiltedCard({
 
         {/* BACK SIDE */}
         <div
-          className="absolute inset-0 rounded-[15px] bg-black px-6 flex flex-col justify-center transform-[rotateY(180deg)] backface-hidden cursor-pointer"
+          className="absolute inset-0 rounded-[15px] bg-black light:bg-neutral-100 light:border light:border-stone-300 px-6 flex flex-col justify-center transform-[rotateY(180deg)] backface-hidden cursor-pointer"
           style={{ pointerEvents: flipped ? "auto" : "none" }}
           onClick={(e) => {
             // Only flip back if clicking empty area

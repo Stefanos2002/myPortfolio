@@ -16,27 +16,27 @@
   }
 }
 
-.container {
-  animation: morphing 8s ease-in-out infinite alternate;
-}
-
 .imageWrapper {
   position: relative;
-  display: inline-block;
+  width: 250px;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
   animation: morphing 8s ease-in-out infinite alternate;
+  background-image: url("/images/profileDark.jpg");
 }
 
-/* overlay pseudo-element for border in front */
 .imageWrapper::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 8px solid rgba(255, 255, 255, 0.202); /* semi-transparent border */
-  border-radius: inherit; /* inherit same morphing border-radius */
-  pointer-events: none; /* so it doesn’t block mouse interactions */
+  inset: 0;
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-radius: inherit;
+  animation: inherit;
+  pointer-events: none;
   box-sizing: border-box;
-  animation: morphing 8s ease-in-out infinite alternate; /* sync morph */
+}
+
+.imageWrapper + div * {
+  transition: all 0.4s;
 }

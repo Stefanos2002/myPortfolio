@@ -14,18 +14,20 @@ export default function About() {
         data-aos="fade-right"
         className="flex w-full pb-10 pt-10 flex-col order-1"
       >
-        <span className="text-neutral-400 text-xs mb-4 bg-neutral-800 w-max uppercase p-3">
+        <span className="text-neutral-400 light:text-black text-xs mb-4 bg-neutral-800 light:bg-stone-300 light:font-semibold w-max uppercase p-3">
           About
         </span>
-        <h1 className="text-white font-extrabold text-3xl">About Me</h1>
+        <h1 className="text-white light:text-black font-extrabold text-3xl">
+          About Me
+        </h1>
       </div>
       <div data-aos="fade-right" className="flex flex-row gap-10 order-2">
         <TiltedCard
-          imageSrc="/images/profile2.jpg"
+          className={`${styles.hero_card} tiltcard`}
           containerHeight="305px"
           containerWidth="300px"
           imageHeight="310px"
-          imageWidth="330px"
+          imageWidth="320px"
           rotateAmplitude={6}
           scaleOnHover={1.05}
           showMobileWarning={false}
@@ -42,55 +44,57 @@ export default function About() {
             <>
               <ul className="text-sm justify-center items-stretch flex flex-col pt-4 pr-4 pl-4 pb-5 gap-4">
                 <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white font-bold text-[15px] cursor-auto">
+                  <span className="text-white light:text-stone-900 font-bold text-[15px] cursor-auto">
                     Fullname:
                   </span>
-                  <span className="text-neutral-300 cursor-auto">
+                  <span className="text-neutral-300 light:text-stone-700 light:font-semibold cursor-auto">
                     Stefanos Kaloulis
                   </span>
                 </li>
                 <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white text-[15px] font-bold cursor-auto">
+                  <span className="text-white light:text-stone-900 text-[15px] font-bold cursor-auto">
                     Age:
                   </span>
-                  <span className="text-neutral-300 cursor-auto">22</span>
+                  <span className="text-neutral-300 light:text-stone-700 light:font-semibold cursor-auto">
+                    22
+                  </span>
                 </li>
                 <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white text-[15px] font-bold cursor-auto">
+                  <span className="text-white light:text-stone-900 text-[15px] font-bold cursor-auto">
                     Birthdate:
                   </span>
-                  <span className="text-neutral-300 cursor-auto">
+                  <span className="text-neutral-300 light:text-stone-700 light:font-semibold cursor-auto">
                     27/12/2002
                   </span>
                 </li>
                 <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white text-[15px] font-bold cursor-auto">
+                  <span className="text-white light:text-stone-900 text-[15px] font-bold cursor-auto">
                     Email:
                   </span>
                   <a
                     href="mailto:kalouliss@gmail.com"
                     aria-label="Send email to kalouliss@gmail.com"
-                    className="text-neutral-300 hover:text-white transition-all duration-200 [transform:translateZ(40)] cursor-pointer"
+                    className="text-neutral-300 light:text-stone-700 light:font-semibold hover:text-white light:hover:text-black transition-all duration-200 [transform:translateZ(40)] cursor-pointer"
                   >
                     kalouliss@gmail.com
                   </a>
                 </li>
                 <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white text-[15px] font-bold cursor-pointer">
+                  <span className="text-white light:text-stone-900 text-[15px] font-bold cursor-pointer">
                     Phone:
                   </span>
                   <a
                     href="tel:+306980090854"
-                    className="text-neutral-300 hover:text-white transition-all duration-200 [transform:translateZ(40)] cursor-pointer"
+                    className="text-neutral-300 light:text-stone-700 light:font-semibold hover:text-white light:hover:text-black transition-all duration-200 [transform:translateZ(40)] cursor-pointer"
                   >
                     +30 698 009 0854
                   </a>
                 </li>
                 <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white text-[15px] font-bold">
+                  <span className="text-white light:text-stone-900 text-[15px] font-bold">
                     Work:
                   </span>
-                  <span className="text-neutral-300">
+                  <span className="text-neutral-300 light:text-stone-700 light:font-semibold">
                     Remote/On-site/Hybrid
                   </span>
                 </li>
@@ -99,12 +103,12 @@ export default function About() {
           }
         />
         <div className="flex flex-col gap-3 justify-center">
-          <p className="text-neutral-300 text-left leading-[1.7rem] text-[16px]">
+          <p className="text-neutral-300 light:text-stone-700 light:font-[450] text-left leading-[1.7rem] text-[16px]">
             Hi, I’m Stefanos Kaloulis, a web developer that lives in Patras,
-            Greece. I&aposm also a Computer Science graduate from the University
-            of Western Macedonia.
+            Greece. I&apos;m also a Computer Science graduate from the
+            University of Western Macedonia.
           </p>
-          <p className="text-neutral-300 text-left leading-[1.7rem] text-[16px]">
+          <p className="text-neutral-300 light:text-stone-700 light:font-[450] text-left leading-[1.7rem] text-[16px]">
             I’m fluent in English and passionate about creating clean,
             functional, and visually appealing websites. I’ve worked extensively
             with HTML, CSS, JavaScript, and TypeScript, and I enjoy building
@@ -113,7 +117,7 @@ export default function About() {
             everything from theme customization to plugin integration and site
             optimization.
           </p>
-          <p className="text-neutral-300 text-left leading-[1.7rem] text-[16px]">
+          <p className="text-neutral-300 light:text-stone-700 light:font-[450] text-left leading-[1.7rem] text-[16px]">
             I love bringing ideas to life on the web and am always exploring new
             tools and techniques to make my projects even better.
           </p>
