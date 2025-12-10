@@ -9,9 +9,6 @@ html,
 body {
   font-family: var(--font-montserrat);
 }
-html.light body {
-  background-color: white;
-}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -160,4 +157,17 @@ html.light .hero_image {
 /* About */
 html.light .tiltcard {
   --card-img: url("/images/profileLight2.jpg");
+}
+
+html.light .fade::before {
+  background: black;
+  width: 3px;
+}
+
+html.light #yellowToOrange stop[offset="0%"] {
+  stop-color: #772092;
+}
+
+html.light #yellowToOrange stop[offset="100%"] {
+  stop-color: #5a1763;
 }

@@ -7,7 +7,7 @@ import AOSWrapper from "../Animations/AOSWrapper/AOSWrapper";
 
 export default function HeroDetails() {
   return (
-    <div className="bg-neutral-900 light:bg-stone-200 flex items-center justify-center h-screen w-full">
+    <div className="flex items-center justify-center h-screen w-full">
       <AOSWrapper />
       <div data-aos="fade-right" className="flex flex-row">
         <div className={`hero_image ${styles.imageWrapper} mr-16`} />

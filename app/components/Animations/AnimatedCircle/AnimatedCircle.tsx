@@ -44,8 +44,8 @@ const AnimatedCircle: React.FC<AnimatedCircleProps> = ({ value, label }) => {
       <svg style={{ height: 0 }}>
         <defs>
           <linearGradient id="yellowToOrange" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#facc15" />
-            <stop offset="100%" stopColor="#ff8c00" />
+            <stop offset="0%" stopColor={"#facc15"} />
+            <stop offset="100%" stopColor={"#ff8c00"} />
           </linearGradient>
         </defs>
       </svg>
@@ -56,13 +56,13 @@ const AnimatedCircle: React.FC<AnimatedCircleProps> = ({ value, label }) => {
         styles={{
           path: {
             stroke: "url(#yellowToOrange)",
-            transition: "stroke-dashoffset 1.2s ease-in-out",
+            transition: "stroke-dashoffset 1.2s ease-in-out, stroke 0.5s ease",
           },
           trail: { stroke: "white", strokeWidth: 6 },
         }}
       />
 
-      <div className="absolute inset-0 text-white flex flex-col items-center justify-center text-sm">
+      <div className="absolute inset-0 text-white transition-all duration-300 light:text-black flex flex-col items-center justify-center text-sm">
         <span>{label}</span>
         <span className="font-semibold">{value}%</span>
       </div>

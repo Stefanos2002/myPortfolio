@@ -22,13 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${montSerrat.variable} antialiased flex relative bg-neutral-900 flex-row w-full min-h-screen`}
+        className={` ${montSerrat.variable} antialiased flex relative flex-row w-full min-h-screen`}
       >
         <Navbar />
         <div className="flex-1 ml-70">
-          {" "}
           <ThemeToggle />
-          {children}
+          <div className="bg-neutral-900 light:bg-stone-200">{children}</div>
         </div>
       </body>
     </html>

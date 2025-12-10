@@ -8,16 +8,16 @@ import AOSWrapper from "../components/Animations/AOSWrapper/AOSWrapper";
 
 export default function About() {
   return (
-    <div className="flex relative light:bg-stone-200 pt-10 pr-22 pl-20 flex-col w-full h-full">
+    <div className="flex relative pt-10 pr-22 pl-20 flex-col w-full h-full">
       <AOSWrapper />
       <div
         data-aos="fade-right"
         className="flex w-full pb-10 pt-10 flex-col order-1"
       >
-        <span className="text-neutral-400 light:text-black text-xs mb-4 bg-neutral-800 light:bg-stone-300 light:font-semibold w-max uppercase p-3">
+        <span className="text-neutral-400 transition-all duration-300 light:text-black light:border-[0.5] light:border-stone-400 text-xs mb-4 bg-neutral-800 light:bg-stone-300 light:font-semibold w-max uppercase p-3">
           About
         </span>
-        <h1 className="text-white light:text-black font-extrabold text-3xl">
+        <h1 className="text-white light:text-black transition-all duration-300 font-extrabold text-3xl">
           About Me
         </h1>
       </div>
@@ -42,59 +42,61 @@ export default function About() {
           }
           overlayBackContent={
             <>
-              <ul className="text-sm justify-center items-stretch flex flex-col pt-4 pr-4 pl-4 pb-5 gap-4">
+              <ul
+                className={`${styles.details}text-sm justify-center items-stretch flex flex-col pt-4 pr-4 pl-4 pb-5 gap-4`}
+              >
                 <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white light:text-stone-900 font-bold text-[15px] cursor-auto">
+                  <span className="text-white transition-colors duration-300 light:text-stone-900 font-bold text-[15px] cursor-auto">
                     Fullname:
                   </span>
-                  <span className="text-neutral-300 light:text-stone-700 light:font-semibold cursor-auto">
+                  <span className="text-neutral-300 transition-colors duration-300 light:text-stone-700 cursor-auto">
                     Stefanos Kaloulis
                   </span>
                 </li>
                 <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white light:text-stone-900 text-[15px] font-bold cursor-auto">
+                  <span className="text-white transition-colors duration-300 light:text-stone-900 text-[15px] font-bold cursor-auto">
                     Age:
                   </span>
-                  <span className="text-neutral-300 light:text-stone-700 light:font-semibold cursor-auto">
+                  <span className="text-neutral-300 transition-colors duration-300 light:text-stone-700 cursor-auto">
                     22
                   </span>
                 </li>
                 <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white light:text-stone-900 text-[15px] font-bold cursor-auto">
+                  <span className="text-white transition-colors duration-300 light:text-stone-900 text-[15px] font-bold cursor-auto">
                     Birthdate:
                   </span>
-                  <span className="text-neutral-300 light:text-stone-700 light:font-semibold cursor-auto">
+                  <span className="text-neutral-300 transition-colors duration-300 light:text-stone-700 cursor-auto">
                     27/12/2002
                   </span>
                 </li>
                 <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white light:text-stone-900 text-[15px] font-bold cursor-auto">
+                  <span className="text-white transition-colors duration-300 light:text-stone-900 text-[15px] font-bold cursor-auto">
                     Email:
                   </span>
                   <a
                     href="mailto:kalouliss@gmail.com"
                     aria-label="Send email to kalouliss@gmail.com"
-                    className="text-neutral-300 light:text-stone-700 light:font-semibold hover:text-white light:hover:text-black transition-all duration-200 [transform:translateZ(40)] cursor-pointer"
+                    className="text-neutral-300 light:text-stone-700 hover:text-white light:hover:text-black transition-all duration-300 [transform:translateZ(40)] cursor-pointer"
                   >
                     kalouliss@gmail.com
                   </a>
                 </li>
                 <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white light:text-stone-900 text-[15px] font-bold cursor-pointer">
+                  <span className="text-white transition-colors duration-300 light:text-stone-900 text-[15px] font-bold cursor-pointer">
                     Phone:
                   </span>
                   <a
                     href="tel:+306980090854"
-                    className="text-neutral-300 light:text-stone-700 light:font-semibold hover:text-white light:hover:text-black transition-all duration-200 [transform:translateZ(40)] cursor-pointer"
+                    className="text-neutral-300 light:text-stone-700 hover:text-white light:hover:text-black transition-all duration-300 [transform:translateZ(40)] cursor-pointer"
                   >
                     +30 698 009 0854
                   </a>
                 </li>
                 <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white light:text-stone-900 text-[15px] font-bold">
+                  <span className="text-white transition-colors duration-300 light:text-stone-900 text-[15px] font-bold">
                     Work:
                   </span>
-                  <span className="text-neutral-300 light:text-stone-700 light:font-semibold">
+                  <span className="text-neutral-300 transition-colors duration-300 light:text-stone-700">
                     Remote/On-site/Hybrid
                   </span>
                 </li>
@@ -103,12 +105,12 @@ export default function About() {
           }
         />
         <div className="flex flex-col gap-3 justify-center">
-          <p className="text-neutral-300 light:text-stone-700 light:font-[450] text-left leading-[1.7rem] text-[16px]">
+          <p className="text-neutral-300 light:text-stone-700 transition-all duration-300 light:font-[450] text-left leading-[1.7rem] text-[16px]">
             Hi, I’m Stefanos Kaloulis, a web developer that lives in Patras,
             Greece. I&apos;m also a Computer Science graduate from the
             University of Western Macedonia.
           </p>
-          <p className="text-neutral-300 light:text-stone-700 light:font-[450] text-left leading-[1.7rem] text-[16px]">
+          <p className="text-neutral-300 light:text-stone-700 light:font-[450] transition-all duration-300 text-left leading-[1.7rem] text-[16px]">
             I’m fluent in English and passionate about creating clean,
             functional, and visually appealing websites. I’ve worked extensively
             with HTML, CSS, JavaScript, and TypeScript, and I enjoy building
@@ -117,7 +119,7 @@ export default function About() {
             everything from theme customization to plugin integration and site
             optimization.
           </p>
-          <p className="text-neutral-300 light:text-stone-700 light:font-[450] text-left leading-[1.7rem] text-[16px]">
+          <p className="text-neutral-300 light:text-stone-700 light:font-[450] transition-all duration-300 text-left leading-[1.7rem] text-[16px]">
             I love bringing ideas to life on the web and am always exploring new
             tools and techniques to make my projects even better.
           </p>
@@ -127,11 +129,11 @@ export default function About() {
         data-aos="fade-right"
         className="flex flex-row order-4 mt-20 mb-20 pb-10 pt-10 justify-center items-center"
       >
-        <h1 className="text-xl font-extrabold text-white mr-10">
+        <h1 className="text-xl font-extrabold text-white transition-all duration-300 light:text-black mr-10">
           Developer Skills
         </h1>
         <div
-          className={`flex flex-col relative items-center justify-center gap-10 ${styles.fade} pl-10`}
+          className={`fade flex flex-col relative transition-all duration-300 items-center justify-center gap-10 ${styles.fade} pl-10`}
         >
           <div className="flex gap-10 flex-row">
             <AnimatedCircle label="Next.js" value={90} />
@@ -224,77 +226,91 @@ export default function About() {
       </div>
       <div
         data-aos="fade-right"
-        className="flex flex-row order-3 bg-black justify-evenly gap-10 mt-24 px-6 py-12 rounded-xl"
+        className="flex flex-row order-3 transition-all duration-300 bg-black light:bg-white light:border light:border-stone-300 justify-evenly gap-10 mt-24 px-6 py-12 rounded-xl"
       >
         <div className="flex flex-col">
-          <h1 className="text-white font-bold text-xl">Education</h1>
+          <h1 className="text-white light:text-black transition-all duration-300 font-bold light:font-black text-xl">
+            Education
+          </h1>
           <div className="flex flex-col h-full items-center justify-center">
-            <span className="text-white font-bold text-lg px-4 py-3 rounded-full">
+            <span className="text-white light:text-black transition-all duration-300 font-bold text-lg px-4 py-3 rounded-full">
               2020 - 2025
             </span>
             <div>
-              <span className="text-white text-lg block">
+              <span className="text-white light:text-black transition-all duration-300 light:font-semibold text-lg block">
                 University of Western Macedonia
               </span>
-              <span className="text-neutral-400 text-[15px] text-center block">
+              <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[15px] text-center block">
                 BSc in Computer Science
               </span>
             </div>
           </div>
         </div>
         <div className="flex flex-col">
-          <h1 className="text-white font-bold text-xl">Experience</h1>
+          <h1 className="text-white light:text-black transition-all duration-300 font-bold light:font-black text-xl">
+            Experience
+          </h1>
           <div className="flex flex-row items-center mt-10 gap-5">
-            <span className="text-neutral-400 text-sm bg-neutral-900 px-5 py-3 rounded-full">
+            <span className="text-neutral-400 text-sm transition-all duration-300 bg-neutral-900 light:text-stone-800 light:bg-stone-200 light:border light:border-stone-400 px-5 py-3 rounded-full">
               2024 (Jul - Oct)
             </span>
             <div>
-              <span className="text-white block">Omega Systems</span>
-              <span className="text-neutral-400 text-[13px] block">
+              <span className="text-white transition-all duration-300 light:text-stone-700 light:font-semibold block">
+                Omega Systems
+              </span>
+              <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[13px] block">
                 Web Developer - Internship
               </span>
             </div>
           </div>
           <div className="flex flex-row items-center mt-10 gap-5">
-            <span className="text-neutral-400 text-sm bg-neutral-900 px-4 py-3 rounded-full">
+            <span className="text-neutral-400 transition-all duration-300 text-sm bg-neutral-900 light:text-stone-800 light:bg-stone-200 light:border light:border-stone-400 px-4 py-3 rounded-full">
               2024 (Jan - Nov)
             </span>
             <div>
-              <span className="text-white block">CineGame Critic website</span>
-              <span className="text-neutral-400 text-[13px] block">
+              <span className="text-white transition-all duration-300 light:text-stone-700 light:font-semibold block">
+                CineGame Critic website
+              </span>
+              <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[13px] block">
                 Next.js FullStack Application
               </span>
             </div>
           </div>
           <div className="flex flex-row items-center mt-10 gap-5">
-            <span className="text-neutral-400 text-sm bg-neutral-900 px-4 py-3 rounded-full">
+            <span className="text-neutral-400 transition-all duration-300 text-sm bg-neutral-900 light:text-stone-800 light:bg-stone-200 light:border light:border-stone-400 px-4 py-3 rounded-full">
               2024 (Oct - Dec)
             </span>
             <div>
-              <span className="text-white block">Set Website</span>
-              <span className="text-neutral-400 text-[13px] block">
+              <span className="text-white transition-all duration-300 light:text-stone-700 light:font-semibold block">
+                Set Website
+              </span>
+              <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[13px] block">
                 FullStack Web Developer
               </span>
             </div>
           </div>
           <div className="flex flex-row items-center mt-10 gap-5">
-            <span className="text-neutral-400 text-sm bg-neutral-900 px-4 py-3 rounded-full">
+            <span className="text-neutral-400 transition-all duration-300 text-sm bg-neutral-900 light:text-stone-800 light:bg-stone-200 light:border light:border-stone-400 px-4 py-3 rounded-full">
               2023 (Oct - Dec)
             </span>
             <div>
-              <span className="text-white block">Boston Kitchen Website</span>
-              <span className="text-neutral-400 text-[13px] block">
+              <span className="text-white transition-all duration-300 light:text-stone-700 light:font-semibold block">
+                Boston Kitchen Website
+              </span>
+              <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[13px] block">
                 Web Designer
               </span>
             </div>
           </div>
           <div className="flex flex-row items-center mt-10 gap-5">
-            <span className="text-neutral-400 text-sm bg-neutral-900 px-4 py-3 rounded-full">
+            <span className="text-neutral-400 transition-all duration-300 text-sm bg-neutral-900 light:text-stone-800 light:bg-stone-200 light:border light:border-stone-400 px-4 py-3 rounded-full">
               2023 (Sep - Oct)
             </span>
             <div>
-              <span className="text-white block">Nekenergy Website</span>
-              <span className="text-neutral-400 text-[13px] block">
+              <span className="text-white transition-all duration-300 light:text-stone-700 light:font-semibold block">
+                Nekenergy Website
+              </span>
+              <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[13px] block">
                 Web Developer
               </span>
             </div>
