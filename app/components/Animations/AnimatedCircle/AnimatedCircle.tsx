@@ -63,7 +63,7 @@ const AnimatedCircle: React.FC<AnimatedCircleProps> = ({ value, label }) => {
       />
 
       <div className="absolute inset-0 text-white transition-all duration-300 light:text-black flex flex-col items-center justify-center text-sm">
-        <span>{label}</span>
+        <span className="font-semibold">{label}</span>
         <span className="font-semibold">{value}%</span>
       </div>
     </div>

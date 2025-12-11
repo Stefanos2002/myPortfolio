@@ -164,10 +164,132 @@ html.light .fade::before {
   width: 3px;
 }
 
+#yellowToOrange stop {
+  transition: stop-color 0.5s ease-in-out;
+}
+
 html.light #yellowToOrange stop[offset="0%"] {
   stop-color: #772092;
 }
 
 html.light #yellowToOrange stop[offset="100%"] {
   stop-color: #5a1763;
+}
+
+/* -------------------------------- */
+/* Global Scrollbar Settings (Light) */
+/* -------------------------------- */
+html.light ::-webkit-scrollbar {
+  width: 14px;
+  height: 5px;
+}
+
+/* Scrollbar Track */
+html.light ::-webkit-scrollbar-track {
+  background: white;
+}
+
+html.light .overlay ::-webkit-scrollbar {
+  background-color: var(--color-neutral-200);
+}
+
+html.light .overlay ::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Scrollbar Thumb */
+html.light ::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: var(--color-neutral-500);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-600);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Scrollbar Buttons */
+html.light ::-webkit-scrollbar-button:single-button {
+  display: block;
+  text-align: center;
+}
+
+/* Up arrow button */
+html.light ::-webkit-scrollbar-button:single-button:decrement {
+  width: 12px;
+  height: 11px !important;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid var(--color-neutral-600) !important;
+  border-radius: 10px;
+  background: none;
+}
+
+/* Down arrow button */
+html.light ::-webkit-scrollbar-button:single-button:increment {
+  width: 12px;
+  height: 11px !important;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid var(--color-neutral-600) !important;
+  border-radius: 10px;
+  background: none;
+}
+
+/* Hide buttons in overlay */
+html.light .overlay ::-webkit-scrollbar-button:single-button {
+  display: none;
+  text-align: center;
+}
+
+/* -------------------------------- */
+/* Overlay Scrollbar Overrides       */
+/* -------------------------------- */
+.overlay ::-webkit-scrollbar {
+  width: 14px;
+  border-radius: 0;
+  background: var(--color-neutral-700);
+}
+
+/* Overlay thumb */
+.overlay ::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+.overlay ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-300);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Overlay buttons hidden by default */
+.overlay ::-webkit-scrollbar-button:single-button {
+  display: none;
+  text-align: center;
+}
+
+/* Overlay up arrow button */
+.overlay ::-webkit-scrollbar-button:single-button:decrement {
+  width: 12px;
+  height: 11px !important;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid var(--color-neutral-400) !important;
+  border-radius: 10px;
+  background: none;
+}
+
+/* Overlay down arrow button */
+.overlay ::-webkit-scrollbar-button:single-button:increment {
+  width: 12px;
+  height: 11px !important;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid var(--color-neutral-400) !important;
+  border-radius: 0;
+  background: none;
 }

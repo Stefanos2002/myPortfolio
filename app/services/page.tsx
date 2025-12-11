@@ -123,10 +123,12 @@ export default function Services() {
         data-aos="fade-right"
         className="flex w-full pb-10 pt-10 flex-col order-1"
       >
-        <span className="text-neutral-400 text-xs mb-4 bg-neutral-800 w-max uppercase p-3">
+        <span className="text-neutral-400 transition-colors duration-300 light:text-black light:border-[0.5] light:border-stone-400 text-xs mb-4 bg-neutral-800 light:bg-stone-300 light:font-semibold w-max uppercase p-3">
           Services
         </span>
-        <h1 className="text-white font-extrabold text-3xl">What I Do</h1>
+        <h1 className="text-white light:text-black transition-all duration-300 font-extrabold text-3xl">
+          What I Do
+        </h1>
       </div>
       <ServiceClient data={data} />
     </div>

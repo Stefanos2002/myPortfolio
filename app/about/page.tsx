@@ -14,7 +14,7 @@ export default function About() {
         data-aos="fade-right"
         className="flex w-full pb-10 pt-10 flex-col order-1"
       >
-        <span className="text-neutral-400 transition-all duration-300 light:text-black light:border-[0.5] light:border-stone-400 text-xs mb-4 bg-neutral-800 light:bg-stone-300 light:font-semibold w-max uppercase p-3">
+        <span className="text-neutral-400 transition-colors duration-300 light:text-black light:border-[0.5] light:border-stone-400 text-xs mb-4 bg-neutral-800 light:bg-stone-300 light:font-semibold w-max uppercase p-3">
           About
         </span>
         <h1 className="text-white light:text-black transition-all duration-300 font-extrabold text-3xl">
@@ -43,7 +43,7 @@ export default function About() {
           overlayBackContent={
             <>
               <ul
-                className={`${styles.details}text-sm justify-center items-stretch flex flex-col pt-4 pr-4 pl-4 pb-5 gap-4`}
+                className={`${styles.details} text-sm justify-center items-stretch flex flex-col pt-4 pr-4 pl-4 pb-5 gap-4`}
               >
                 <li className="flex flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
                   <span className="text-white transition-colors duration-300 light:text-stone-900 font-bold text-[15px] cursor-auto">
@@ -153,12 +153,12 @@ export default function About() {
       <div className="flex gap-10 order-5 mb-24 flex-row items-center justify-center">
         <div
           data-aos="fade-right"
-          className="bg-black h-86 w-2/5 p-10 rounded-3xl flex flex-col"
+          className="bg-black transition-all duration-300 light:bg-white light:border light:border-stone-300 h-86 w-2/5 p-10 rounded-3xl flex flex-col"
         >
-          <h1 className="text-white text-left border-b-[0.5] pb-1">
+          <h1 className="text-white transition-all duration-300 light:text-black light:font-semibold text-left border-b-[0.5] light:border-stone-800 pb-1">
             Development Tools
           </h1>
-          <ul className="text-neutral-400 mt-6 leading-8 list">
+          <ul className="text-neutral-400 transition-all duration-300 light:text-stone-800 mt-6 leading-8 list">
             <li className="flex flex-row items-center gap-2">
               <FaCheckCircle />
               Git/GitHub
@@ -187,12 +187,12 @@ export default function About() {
         </div>
         <div
           data-aos="fade-left"
-          className="bg-black h-86 w-[45%] p-10 rounded-3xl"
+          className="bg-black transition-all duration-300 light:bg-white light:border light:border-stone-300 h-86 w-[45%] p-10 rounded-3xl"
         >
-          <h1 className="text-white text-left border-b-[0.5] pb-1">
+          <h1 className="text-white transition-all duration-300 light:text-black light:font-semibold text-left border-b-[0.5] light:border-stone-800 pb-1">
             Interests
           </h1>
-          <ul className="text-neutral-400 mt-6 leading-8 list">
+          <ul className="text-neutral-400 transition-all duration-300 light:text-stone-800 mt-6 leading-8 list">
             <li className="flex flex-row items-center gap-2">
               <GiLightBulb />
               Crafting Dynamic Websites

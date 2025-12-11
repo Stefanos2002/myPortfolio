@@ -90,17 +90,17 @@ export default function ServiceClient({ data }: { data: ServiceData[] }) {
           data-aos={"fade-in"}
           data-aos-duration="300"
           onClick={closeModal}
-          className={`fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/40 ${
+          className={`overlay fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/40 ${
             animateOut ? styles.fadeOut : ""
           }`}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className={`bg-neutral-900 text-neutral-200 p-10 rounded-2xl w-3/5 h-3/4 overflow-y-auto ${styles.scrollbar} relative`}
+            className={`bg-neutral-900 light:bg-white text-neutral-200 light:text-black p-10 rounded-2xl w-3/5 h-3/4 overflow-y-auto ${styles.scrollbar} relative`}
           >
             <button
               onClick={closeModal}
-              className={`absolute top-3 right-5 text-xl border rounded-full px-2.5 py-1 cursor-pointer ${styles.bounce}`}
+              className={`absolute top-3 right-5 text-xl border light:border-[1.5] light:border-black light:font-semibold rounded-full px-2.5 py-1 cursor-pointer ${styles.bounce}`}
             >
               ✕
             </button>
@@ -114,17 +114,21 @@ export default function ServiceClient({ data }: { data: ServiceData[] }) {
                 className="mb-4"
               />
             )}
-            <p className="text-neutral-400 mb-6">{modalData.intro}</p>
-            <h2 className="mb-2">What I Offer</h2>
+            <p className="text-neutral-400 light:text-black mb-6">
+              {modalData.intro}
+            </p>
+            <h2 className="mb-2 light:font-bold">What I Offer</h2>
             {modalData.qualifications.length > 0 && (
-              <ul className="mb-6 list-disc text-neutral-400">
+              <ul className="mb-6 list-disc text-neutral-400 light:text-black">
                 {modalData.qualifications?.map((item) => (
                   <li key={`${modalData.title}-${item}`}>{item}</li>
                 ))}
               </ul>
             )}
-            <h2>My Focus</h2>
-            <p className="text-neutral-400 mt-2">{modalData.focus}</p>
+            <h2 className="mb-2 light:font-bold">My Focus</h2>
+            <p className="text-neutral-400 light:text-black">
+              {modalData.focus}
+            </p>
           </div>
         </div>
       )}

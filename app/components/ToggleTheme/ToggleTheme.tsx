@@ -25,7 +25,7 @@ export default function ThemeToggle() {
         localStorage.setItem("theme", newLight ? "light" : "dark");
         document.documentElement.classList.toggle("light", newLight);
       }}
-      className="rounded-l-full cursor-pointer fixed z-50 right-0 bottom-[50%] text-[22px] px-4 h-max w-max py-4 rounded bg-neutral-600 text-white light:bg-stone-300 light:text-stone-700"
+      className="rounded-l-full transition-all duration-300 cursor-pointer fixed z-50 right-0 bottom-[50%] text-[22px] px-4 h-max w-max py-4 rounded bg-neutral-600 text-white light:bg-stone-300 light:text-stone-700"
     >
       {light ? <FaMoon /> : <FaSun />}
     </button>
