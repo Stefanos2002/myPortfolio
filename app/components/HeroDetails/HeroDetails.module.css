@@ -26,6 +26,13 @@
   background-image: url("/images/profileDark.jpg");
 }
 
+@media (max-width: 770px) {
+  .imageWrapper {
+    width: 180px;
+    height: 200px;
+  }
+}
+
 .imageWrapper::after {
   content: "";
   position: absolute;

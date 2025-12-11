@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav
       id="navbar"
-      className="fixed bg-black light:bg-white flex flex-col items-center justify-center h-full w-70"
+      className="fixed bg-black light:bg-white hidden xl:flex flex-col items-center justify-center h-full w-70"
     >
       <ul
         className={`text-neutral-400 light:text-black ${styles.container} text-[17px] leading-12 mt-14 mb-16 text-left`}

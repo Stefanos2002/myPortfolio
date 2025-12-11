@@ -109,7 +109,7 @@ export default function CardContainer() {
       >
         <SplitText
           text="Check out some of my past projects"
-          className="text-2xl text-center mt-20 p-5 px-8 border-[0.5] text-white"
+          className="text-2xl transition-all duration-300 text-center mt-20 p-5 px-8 border-[0.5] text-white light:text-black light:border-black light:border-2"
           delay={70}
           duration={0.3}
           ease="power3.out"

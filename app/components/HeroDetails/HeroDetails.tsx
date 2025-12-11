@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./HeroDetails.module.css";
 import TextType from "../Animations/TextAnimation/TextType";
 import { FaInstagram, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
@@ -9,10 +8,13 @@ export default function HeroDetails() {
   return (
     <div className="flex items-center justify-center h-screen w-full">
       <AOSWrapper />
-      <div data-aos="fade-right" className="flex flex-row">
-        <div className={`hero_image ${styles.imageWrapper} mr-16`} />
-        <div className="flex w-lg justify-center flex-col">
-          <h1 className="uppercase text-white light:text-black light:font-extrabold text-4xl font-black">
+      <div
+        data-aos="fade-right"
+        className="flex flex-col gap-10 lg:gap-0 lg:flex-row w-full justify-center items-center"
+      >
+        <div className={`hero_image ${styles.imageWrapper} mr-0 lg:mr-16`} />
+        <div className="flex w-lg justify-center items-center lg:items-start flex-col">
+          <h1 className="uppercase text-white light:text-black light:font-extrabold text-3xl md:text-4xl font-black">
             Stefanos Kaloulis
           </h1>
           <h2 className="text-white light:text-black text-xl pt-4 pb-4">
@@ -29,7 +31,7 @@ export default function HeroDetails() {
               cursorCharacter="|"
             />
           </h2>
-          <p className="text-neutral-400 light:text-black">
+          <p className="text-neutral-400 text-center w-90 lg:w-auto lg:text-left light:text-black">
             Web Developer crafting sleek, responsive experiences from Patras,
             Greece.
           </p>

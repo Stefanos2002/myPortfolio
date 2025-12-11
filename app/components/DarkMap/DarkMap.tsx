@@ -1,21 +1,17 @@
 "use client";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import { useMemo } from "react";
-
 const center = { lat: 38.2461111, lng: 21.7355757 };
-
 const containerStyle = {
   width: "100%",
   height: "400px",
   borderRadius: "12px",
   overflow: "hidden",
 };
-
 export default function DarkMap() {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
   });
-
   const options = useMemo(
     () => ({
       disableDefaultUI: true,
@@ -24,9 +20,7 @@ export default function DarkMap() {
     }),
     []
   );
-
   if (!isLoaded) return <div className="text-neutral-300">Loading map…</div>;
-
   return (
     <GoogleMap
       mapContainerStyle={containerStyle}
@@ -34,11 +28,11 @@ export default function DarkMap() {
       zoom={10}
       options={options}
     >
-      <Marker position={center} />
+      {" "}
+      <Marker position={center} />{" "}
     </GoogleMap>
   );
 }
-
 const darkStyle = [
   { elementType: "geometry", stylers: [{ color: "#1f1f1f" }] },
   { elementType: "labels.text.stroke", stylers: [{ color: "#1f1f1f" }] },
@@ -89,3 +83,7 @@ const darkStyle = [
     stylers: [{ color: "#8a8a8a" }],
   },
 ];
+<div data-aos="fade-right" className="w-full h-96 order-2">
+  {" "}
+  <DarkMap />{" "}
+</div>;
