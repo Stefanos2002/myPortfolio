@@ -31,7 +31,7 @@ export default function HeroDetails() {
               cursorCharacter="|"
             />
           </h2>
-          <p className="text-neutral-400 text-center w-full max-w-84 lg:w-lg lg:text-left light:text-black">
+          <p className="text-neutral-400 text-center  max-w-70 min-[385px]:max-w-84 lg:w-lg lg:text-left light:text-black">
             Web Developer crafting sleek, responsive experiences from Patras,
             Greece.
           </p>
