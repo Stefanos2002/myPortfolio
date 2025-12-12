@@ -6,18 +6,18 @@ import AOSWrapper from "../Animations/AOSWrapper/AOSWrapper";
 
 export default function HeroDetails() {
   return (
-    <div className="flex items-center justify-center h-screen w-full">
+    <div className="flex items-center justify-center min-h-screen w-full">
       <AOSWrapper />
       <div
         data-aos="fade-right"
-        className="flex flex-col gap-10 lg:gap-0 lg:flex-row w-full justify-center items-center"
+        className="flex flex-col gap-6 lg:gap-0 lg:flex-row w-full justify-center items-center"
       >
         <div className={`hero_image ${styles.imageWrapper} mr-0 lg:mr-16`} />
-        <div className="flex w-lg justify-center items-center lg:items-start flex-col">
-          <h1 className="uppercase text-white light:text-black light:font-extrabold text-3xl md:text-4xl font-black">
+        <div className="flex w-full lg:w-lg px-5 lg:px-0 justify-center items-center lg:items-start flex-col">
+          <h1 className="uppercase text-white light:text-black light:font-extrabold text-3xl text-center md:text-4xl font-black">
             Stefanos Kaloulis
           </h1>
-          <h2 className="text-white light:text-black text-xl pt-4 pb-4">
+          <h2 className="text-white text-center light:text-black text-xl pt-4 pb-4">
             <TextType
               text={[
                 "React Developer",
@@ -31,7 +31,7 @@ export default function HeroDetails() {
               cursorCharacter="|"
             />
           </h2>
-          <p className="text-neutral-400 text-center w-90 lg:w-auto lg:text-left light:text-black">
+          <p className="text-neutral-400 text-center w-full max-w-84 lg:w-lg lg:text-left light:text-black">
             Web Developer crafting sleek, responsive experiences from Patras,
             Greece.
           </p>
