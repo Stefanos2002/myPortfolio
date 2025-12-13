@@ -8,11 +8,11 @@ import AOSWrapper from "../components/Animations/AOSWrapper/AOSWrapper";
 
 export default function About() {
   return (
-    <div className="flex relative pt-10 pr-22 pl-20 flex-col w-full h-full">
+    <div className="flex items-center pt-20 px-10 xl:px-0 justify-center min-h-screen w-full flex-col">
       <AOSWrapper />
       <div
         data-aos="fade-right"
-        className="flex w-full pb-10 pt-10 flex-col order-1"
+        className="flex w-full max-w-232 pb-10 pt-10 flex-col order-1"
       >
         <span className="text-neutral-400 transition-colors duration-300 light:text-black light:border-[0.5] light:border-stone-400 text-xs mb-4 bg-neutral-800 light:bg-stone-300 light:font-semibold w-max uppercase p-3">
           About
@@ -21,7 +21,10 @@ export default function About() {
           About Me
         </h1>
       </div>
-      <div data-aos="fade-right" className="flex flex-row gap-10 order-2">
+      <div
+        data-aos="fade-right"
+        className="flex flex-col items-center lg:flex-row gap-10 order-2"
+      >
         <TiltedCard
           className={`${styles.hero_card} tiltcard`}
           containerHeight="305px"
@@ -104,8 +107,8 @@ export default function About() {
             </>
           }
         />
-        <div className="flex flex-col gap-3 justify-center">
-          <p className="text-neutral-300 light:text-stone-700 transition-all duration-300 light:font-[450] text-left leading-[1.7rem] text-[16px]">
+        <div className="flex w-full max-w-200 lg:max-w-143 flex-col gap-3 lg:text-left justify-center">
+          <p className="text-neutral-300 light:text-stone-700 transition-all duration-300 light:font-[450] leading-[1.7rem] text-[16px]">
             Hi, I’m Stefanos Kaloulis, a web developer that lives in Patras,
             Greece. I&apos;m also a Computer Science graduate from the
             University of Western Macedonia.
@@ -150,7 +153,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="flex gap-10 order-5 mb-24 flex-row items-center justify-center">
+      <div className="flex gap-10 w-full max-w-258 order-5 mb-24 flex-row items-center justify-center">
         <div
           data-aos="fade-right"
           className="bg-black transition-all duration-300 light:bg-white light:border light:border-stone-300 h-86 w-2/5 p-10 rounded-3xl flex flex-col"
@@ -226,7 +229,7 @@ export default function About() {
       </div>
       <div
         data-aos="fade-right"
-        className="flex flex-row order-3 transition-all duration-300 bg-black light:bg-white light:border light:border-stone-300 justify-evenly gap-10 mt-24 px-6 py-12 rounded-xl"
+        className="flex w-full max-w-232 flex-row order-3 transition-all duration-300 bg-black light:bg-white light:border light:border-stone-300 justify-evenly gap-10 mt-24 px-6 py-12 rounded-xl"
       >
         <div className="flex flex-col">
           <h1 className="text-white light:text-black transition-all duration-300 font-bold light:font-black text-xl">
