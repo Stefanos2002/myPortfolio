@@ -10,7 +10,7 @@ export default function HeroDetails() {
       <AOSWrapper />
       <div
         data-aos="fade-right"
-        className="flex flex-col gap-6 lg:gap-0 lg:flex-row w-full justify-center items-center"
+        className="flex flex-col pt-16 lg:pt-0 gap-6 lg:gap-0 lg:flex-row w-full justify-center items-center"
       >
         <div className={`hero_image ${styles.imageWrapper} mr-0 lg:mr-16`} />
         <div className="flex w-full lg:w-lg px-5 lg:px-0 justify-center items-center lg:items-start flex-col">
