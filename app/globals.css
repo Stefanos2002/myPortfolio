@@ -293,3 +293,7 @@ html.light .overlay ::-webkit-scrollbar-button:single-button {
   border-radius: 0;
   background: none;
 }
+
+/* * {
+  outline: 1px solid red;
+} */

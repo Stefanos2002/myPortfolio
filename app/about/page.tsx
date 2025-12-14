@@ -23,21 +23,14 @@ export default function About() {
       </div>
       <div
         data-aos="fade-right"
-        className="flex items-center flex-row gap-10 order-2 [--card-w:220px] [--card-h:230px]
-    [--img-w:260px]  [--img-h:240px]
-    lg:[--card-w:300px] lg:[--card-h:305px]
-    lg:[--img-w:320px]  lg:[--img-h:310px]"
+        className="flex items-center flex-wrap justify-center gap-10 order-2"
       >
         <TiltedCard
           className={`${styles.hero_card} tiltcard`}
-          // containerHeight="305px"
-          // containerWidth="300px"
-          // imageHeight="310px"
-          // imageWidth="320px"
-          containerHeight="var(--card-w)"
-          containerWidth="var(--card-h)"
-          imageHeight="var(--img-w)"
-          imageWidth="var(--img-h)"
+          containerHeight="305px"
+          containerWidth="300px"
+          imageHeight="310px"
+          imageWidth="320px"
           rotateAmplitude={6}
           scaleOnHover={1.05}
           showMobileWarning={false}
@@ -114,13 +107,23 @@ export default function About() {
             </>
           }
         />
-        <div className="flex w-full max-w-150 lg:max-w-143 translate-y-5.5 lg:translate-y-2.5 flex-col gap-1.5 lg:gap-3 justify-center">
-          <p className="text-neutral-300 text-left light:text-stone-700 transition-all duration-300 light:font-[450] leading-[1.7rem] text-[15px] lg:text-[16px]">
+        <div
+          className="flex w-full max-w-160 lg:max-w-143 translate-y-1 flex-col gap-1.5 lg:gap-3 justify-center items-center
+    flex-wrap
+    max-[895px]:gap-0 text-start min-[895px]:text-center"
+        >
+          <p
+            className="text-neutral-300 max-[895px]:inline
+      light:text-stone-700 transition-all duration-300 light:font-[450] leading-[1.7rem] text-[15px] lg:text-[16px]"
+          >
             Hi, I’m Stefanos Kaloulis, a web developer that lives in Patras,
             Greece. I&apos;m also a Computer Science graduate from the
             University of Western Macedonia.
           </p>
-          <p className="text-neutral-300 light:text-stone-700 light:font-[450] transition-all duration-300 text-left leading-[1.7rem] text-[15px] lg:text-[16px]">
+          <p
+            className="text-neutral-300 light:text-stone-700 light:font-[450] transition-all duration-300 max-[895px]:inline
+      leading-[1.7rem] text-[15px] lg:text-[16px]"
+          >
             I’m fluent in English and passionate about creating clean,
             functional, and visually appealing websites. I’ve worked extensively
             with HTML, CSS, JavaScript, and TypeScript, and I enjoy building
@@ -129,7 +132,10 @@ export default function About() {
             everything from theme customization to plugin integration and site
             optimization.
           </p>
-          <p className="text-neutral-300 light:text-stone-700 light:font-[450] transition-all duration-300 text-left leading-[1.7rem] text-[15px] lg:text-[16px]">
+          <p
+            className="text-neutral-300 light:text-stone-700 light:font-[450] transition-all duration-300 max-[895px]:inline
+       leading-[1.7rem] text-[15px] lg:text-[16px]"
+          >
             I love bringing ideas to life on the web and am always exploring new
             tools and techniques to make my projects even better.
           </p>
@@ -137,7 +143,7 @@ export default function About() {
       </div>
       <div
         data-aos="fade-right"
-        className="flex flex-row order-4 mt-20 mb-20 pb-10 pt-10 justify-center items-center"
+        className="flex flex-row flex-wrap w-full max-w-232 order-4 mt-20 mb-20 pb-10 pt-10 justify-center items-center"
       >
         <h1 className="text-xl font-extrabold text-white transition-all duration-300 light:text-black mr-10">
           Developer Skills
@@ -160,10 +166,10 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="flex gap-10 w-full max-w-258 order-5 mb-24 flex-row items-center justify-center">
+      <div className="flex gap-10 w-full max-w-232 flex-col min-[925px]:flex-row order-5 mb-24 items-center justify-center">
         <div
           data-aos="fade-right"
-          className="bg-black transition-all duration-300 light:bg-white light:border light:border-stone-300 h-86 w-2/5 p-10 rounded-3xl flex flex-col"
+          className="bg-black transition-all duration-300 light:bg-white light:border light:border-stone-300 p-10 rounded-3xl flex flex-col"
         >
           <h1 className="text-white transition-all duration-300 light:text-black light:font-semibold text-left border-b-[0.5] light:border-stone-800 pb-1">
             Development Tools
@@ -197,7 +203,7 @@ export default function About() {
         </div>
         <div
           data-aos="fade-left"
-          className="bg-black transition-all duration-300 light:bg-white light:border light:border-stone-300 h-86 w-[45%] p-10 rounded-3xl"
+          className="bg-black transition-all duration-300 light:bg-white light:border light:border-stone-300 p-10 rounded-3xl"
         >
           <h1 className="text-white transition-all duration-300 light:text-black light:font-semibold text-left border-b-[0.5] light:border-stone-800 pb-1">
             Interests
