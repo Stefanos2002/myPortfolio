@@ -30,26 +30,27 @@
   }
 }
 
-.fade::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
+@media (min-width: 1024px) {
+  .fade::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px; /* border thickness */
+    background: white; /* border color */
 
-  width: 2px; /* border thickness */
-  background: white; /* border color */
+    /* fade at top and bottom */
+    mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      black 20%,
+      black 80%,
+      transparent
+    );
 
-  /* fade at top and bottom */
-  mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    black 20%,
-    black 80%,
-    transparent
-  );
-
-  pointer-events: none;
+    pointer-events: none;
+  }
 }
 
 .hero_card {

@@ -7,6 +7,17 @@ import styles from "./about.module.css";
 import AOSWrapper from "../components/Animations/AOSWrapper/AOSWrapper";
 
 export default function About() {
+  const skills = [
+    { label: "Next.js", value: 90 },
+    { label: "React.js", value: 86 },
+    { label: "TypeScript", value: 83 },
+    { label: "JavaScript", value: 80 },
+    { label: "Tailwind", value: 95 },
+    { label: "HTML", value: 95 },
+    { label: "Node.js", value: 78 },
+    { label: "MongoDB", value: 76 },
+    { label: "WordPress", value: 73 },
+  ];
   return (
     <section className="w-full min-h-screen flex justify-center px-10 min-[1060px]:px-20 max-[520px]:px-5 pt-35 xl:pt-20">
       <AOSWrapper />
@@ -14,10 +25,10 @@ export default function About() {
       <div className="w-full max-w-4xl flex flex-col gap-20">
         {/* ===== Header ===== */}
         <header data-aos="fade-right">
-          <span className="text-xs uppercase bg-neutral-800 light:bg-stone-300 text-neutral-400 light:text-black px-3 py-2 rounded-md w-max">
+          <span className="text-neutral-400 transition-colors duration-300 light:text-black light:border-[0.5] light:border-stone-400 text-xs mb-4 bg-neutral-800 light:bg-stone-300 light:font-semibold w-max uppercase p-3">
             About
           </span>
-          <h1 className="mt-4 text-3xl font-extrabold text-white light:text-black">
+          <h1 className="text-white mt-6 light:text-black transition-all duration-300 font-extrabold text-3xl">
             About Me
           </h1>
         </header>
@@ -76,18 +87,18 @@ export default function About() {
                       key={label}
                       className="flex flex-row justify-between border-b border-neutral-700 pb-1"
                     >
-                      <span className="font-bold text-white light:text-black">
+                      <span className="font-bold transition-colors duration-300 text-white light:text-black">
                         {label}:
                       </span>
                       {link ? (
                         <a
                           href={link}
-                          className="text-neutral-300 light:text-stone-700 hover:text-white"
+                          className="text-neutral-300 transition-colors duration-300 light:text-stone-700 hover:text-white"
                         >
                           {value}
                         </a>
                       ) : (
-                        <span className="text-neutral-300 text-right light:text-stone-700">
+                        <span className="text-neutral-300 transition-colors duration-300 text-right light:text-stone-700">
                           {value}
                         </span>
                       )}
@@ -99,14 +110,14 @@ export default function About() {
           </div>
 
           {/* Bio */}
-          <div className="max-w-xl max-[922px]:max-w-md max-[922px]:text-center text-left space-y-3">
-            <p className="text-neutral-300 light:text-stone-700 leading-relaxed">
+          <div className="max-w-xl max-[922px]:max-w-2xl max-[922px]:text-center text-left space-y-3">
+            <p className="text-neutral-300 transition-colors duration-300 light:text-stone-700 leading-relaxed">
               Hi, I’m Stefanos Kaloulis, a web developer based in Patras, Greece
               and a Computer Science graduate from the University of Western
               Macedonia.
             </p>
 
-            <p className="text-neutral-300 light:text-stone-700 leading-relaxed">
+            <p className="text-neutral-300 transition-colors duration-300 light:text-stone-700 leading-relaxed">
               I&apos;m Fluent in English and passionate about creating clean,
               functional websites. Experienced with HTML, CSS, JavaScript, and
               TypeScript, and building responsive, user-friendly apps with
@@ -114,7 +125,7 @@ export default function About() {
               customization, plugin integration, and site optimization.
             </p>
 
-            <p className="text-neutral-300 light:text-stone-700 leading-relaxed">
+            <p className="text-neutral-300 transition-colors duration-300 light:text-stone-700 leading-relaxed">
               I love bringing ideas to life on the web and continuously learning
               new technologies.
             </p>
@@ -122,9 +133,14 @@ export default function About() {
         </section>
 
         {/* ===== Tools & Interests ===== */}
-        <section className="grid order-3 grid-cols-1 md:grid-cols-2 gap-10">
-          <div data-aos="fade-right" className="card">
-            <h2 className="section-title">Development Tools</h2>
+        <section className="grid order-4 mb-20 justify-center grid-cols-1 md:grid-cols-2 gap-10">
+          <div
+            data-aos="fade-right"
+            className="card bg-black light:bg-white rounded-xl p-10"
+          >
+            <h1 className="text-white transition-all duration-300 light:text-black light:font-semibold text-left border-b-[0.5] light:border-stone-800 pb-1">
+              Development Tools
+            </h1>
             <ul className="list space-y-2 mt-6">
               {[
                 "Git / GitHub",
@@ -134,15 +150,23 @@ export default function About() {
                 "REST APIs",
                 "Server Management",
               ].map((tool) => (
-                <li key={tool} className="flex items-center gap-2">
+                <li
+                  key={tool}
+                  className="flex transition-colors duration-300 text-white light:text-black items-center gap-2"
+                >
                   <FaCheckCircle /> {tool}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div data-aos="fade-left" className="card">
-            <h2 className="section-title">Interests</h2>
+          <div
+            data-aos="fade-left"
+            className="card bg-black light:bg-white rounded-xl p-10"
+          >
+            <h1 className="text-white transition-all duration-300 light:text-black light:font-semibold text-left border-b-[0.5] light:border-stone-800 pb-1">
+              Interests
+            </h1>
             <ul className="list space-y-2 mt-6">
               {[
                 "Dynamic Websites",
@@ -153,14 +177,37 @@ export default function About() {
                 "Optimization",
                 "New Technologies",
               ].map((interest) => (
-                <li key={interest} className="flex items-center gap-2">
+                <li
+                  key={interest}
+                  className="flex transition-colors duration-300 text-white light:text-black items-center gap-2"
+                >
                   <GiLightBulb /> {interest}
                 </li>
               ))}
             </ul>
           </div>
         </section>
+        {/* ===== Developer Skills ===== */}
+        <div
+          // data-aos="fade-right"
+          className="flex flex-col my-8 md:my-12 lg:flex-row order-3 justify-center items-center"
+        >
+          <h1 className="lg:text-xl transition-colors duration-300 text-2xl underline lg:no-underline text-center font-extrabold text-white light:text-black mb-13 mr-0 lg:mb-0 lg:mr-10">
+            Developer Skills
+          </h1>
 
+          <div
+            className={`relative max-w-2xl lg:max-w-full transition-all duration-300 flex flex-wrap justify-center gap-10 ${styles.fade} pl-0 lg:pl-10`}
+          >
+            {skills.map((skill) => (
+              <AnimatedCircle
+                key={skill.label}
+                label={skill.label}
+                value={skill.value}
+              />
+            ))}
+          </div>
+        </div>
         {/* ===== Education & Experience ===== */}
         <section
           data-aos="fade-right"
@@ -211,10 +258,12 @@ export default function About() {
                     {date}
                   </span>
                   <div>
-                    <p className="text-white max-[500px]:text-center light:text-black font-semibold">
+                    <p className="text-white transition-colors duration-300 max-[500px]:text-center light:text-black font-semibold">
                       {company}
                     </p>
-                    <p className="text-neutral-400 text-sm">{role}</p>
+                    <p className="text-neutral-400 transition-colors duration-300 text-sm">
+                      {role}
+                    </p>
                   </div>
                 </div>
               ))}
