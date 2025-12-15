@@ -19,7 +19,7 @@ export default function About() {
     { label: "WordPress", value: 73 },
   ];
   return (
-    <section className="w-full min-h-screen flex justify-center px-10 min-[1060px]:px-20 max-[520px]:px-5 pt-35 xl:pt-20">
+    <section className="w-full min-h-screen overflow-x-hidden flex justify-center px-10 min-[1060px]:px-20 max-[520px]:px-5 pt-35 xl:pt-20">
       <AOSWrapper />
 
       <div className="w-full max-w-4xl flex flex-col gap-20">
@@ -189,7 +189,7 @@ export default function About() {
         </section>
         {/* ===== Developer Skills ===== */}
         <div
-          // data-aos="fade-right"
+          data-aos="fade-right"
           className="flex flex-col my-8 md:my-12 lg:flex-row order-3 justify-center items-center"
         >
           <h1 className="lg:text-xl transition-colors duration-300 text-2xl underline lg:no-underline text-center font-extrabold text-white light:text-black mb-13 mr-0 lg:mb-0 lg:mr-10">

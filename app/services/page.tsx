@@ -117,7 +117,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="flex relative pt-10 pr-22 pl-20 flex-col w-full h-full">
+    <div className="flex px-10 min-[830px]:px-20 min-h-screen relative pt-24 xl:pt-10 flex-col w-full">
       <AOSWrapper />
       <div
         data-aos="fade-right"
