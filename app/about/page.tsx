@@ -8,334 +8,220 @@ import AOSWrapper from "../components/Animations/AOSWrapper/AOSWrapper";
 
 export default function About() {
   return (
-    <div className="flex items-center pt-20 px-7 xl:px-0 justify-center min-h-screen w-full flex-col">
+    <section className="w-full min-h-screen flex justify-center px-10 min-[1060px]:px-20 max-[520px]:px-5 pt-35 xl:pt-20">
       <AOSWrapper />
-      <div
-        data-aos="fade-right"
-        className="flex w-full max-w-232 pb-10 pt-10 flex-col order-1"
-      >
-        <span className="text-neutral-400 transition-colors duration-300 light:text-black light:border-[0.5] light:border-stone-400 text-xs mb-4 bg-neutral-800 light:bg-stone-300 light:font-semibold w-max uppercase p-3">
-          About
-        </span>
-        <h1 className="text-white light:text-black transition-all duration-300 font-extrabold text-3xl">
-          About Me
-        </h1>
-      </div>
-      <div
-        data-aos="fade-right"
-        className="flex  
-    [--card-w:430px] [--card-h:430px]
-    [--img-w:430px]  [--img-h:430px]
-    min-[950px]:[--card-w:300px]  min-[950px]:[--card-h:305px]
-     min-[950px]:[--img-w:320px]   min-[950px]:[--img-h:310px] items-center max-[950px]:flex-col flex-row justify-center px-5 py-5 max-[950px]:gap-2 gap-10 order-2"
-      >
-        <TiltedCard
-          className={`${styles.hero_card} tiltcard`}
-          containerHeight="var(--card-w)"
-          containerWidth="var(--card-h)"
-          imageHeight="var(--img-w)"
-          imageWidth="var(--img-w)"
-          rotateAmplitude={6}
-          scaleOnHover={1.05}
-          showMobileWarning={false}
-          showTooltip={false}
-          displayOverlayContent={true}
-          overlayFrontContent={
-            <button
-              className={`${styles.card_button} border cursor-pointer solid border-neutral-300 text-md rounded-full text-white bg-neutral-700/75 p-1 px-3`}
-            >
-              Click Me
-            </button>
-          }
-          overlayBackContent={
-            <>
-              <ul
-                className={`${styles.details} text-sm max-[950px]:text-[16px] justify-center items-stretch flex flex-col pt-4 pr-4 pl-4 pb-5 gap-4`}
-              >
-                <li className="flex max-[950px]:flex-col flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white transition-colors duration-300 light:text-stone-900 font-bold text-[16px] cursor-auto">
-                    Fullname:
-                  </span>
-                  <span className="text-neutral-300 transition-colors duration-300 light:text-stone-700 cursor-auto">
-                    Stefanos Kaloulis
-                  </span>
-                </li>
-                <li className="flex max-[950px]:flex-col flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white transition-colors duration-300 light:text-stone-900 text-[16px] font-bold cursor-auto">
-                    Age:
-                  </span>
-                  <span className="text-neutral-300 transition-colors duration-300 light:text-stone-700 cursor-auto">
-                    22
-                  </span>
-                </li>
-                <li className="flex max-[950px]:flex-col flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white transition-colors duration-300 light:text-stone-900 text-[16px] font-bold cursor-auto">
-                    Birthdate:
-                  </span>
-                  <span className="text-neutral-300 transition-colors duration-300 light:text-stone-700 cursor-auto">
-                    27/12/2002
-                  </span>
-                </li>
-                <li className="flex max-[950px]:flex-col flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white transition-colors duration-300 light:text-stone-900 text-[16px] font-bold cursor-auto">
-                    Email:
-                  </span>
-                  <a
-                    href="mailto:kalouliss@gmail.com"
-                    aria-label="Send email to kalouliss@gmail.com"
-                    className="text-neutral-300 light:text-stone-700 hover:text-white light:hover:text-black transition-all duration-300 [transform:translateZ(40)] cursor-pointer"
-                  >
-                    kalouliss@gmail.com
-                  </a>
-                </li>
-                <li className="flex max-[950px]:flex-col flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white transition-colors duration-300 light:text-stone-900 text-[15px] font-bold cursor-pointer">
-                    Phone:
-                  </span>
-                  <a
-                    href="tel:+306980090854"
-                    className="text-neutral-300 light:text-stone-700 hover:text-white light:hover:text-black transition-all duration-300 [transform:translateZ(40)] cursor-pointer"
-                  >
-                    +30 698 009 0854
-                  </a>
-                </li>
-                <li className="flex max-[950px]:flex-col flex-row justify-between items-center border-neutral-700 border-b pb-1 rounded-sm">
-                  <span className="text-white transition-colors duration-300 light:text-stone-900 text-[15px] font-bold">
-                    Work:
-                  </span>
-                  <span className="text-neutral-300 transition-colors duration-300 light:text-stone-700">
-                    Remote/On-site/Hybrid
-                  </span>
-                </li>
-              </ul>
-            </>
-          }
-        />
-        <div
-          className="flex w-full max-w-140 min-[950px]:max-w-143 translate-y-2.5 max-[1004px]:translate-y-4.5 max-[963px]:translate-y-8 flex-col gap-3 justify-center items-center
-     min-[950px]:text-start text-center"
-        >
-          <p
-            className="text-neutral-300
-      light:text-stone-700 transition-all duration-300 light:font-[450] leading-[1.7rem] text-[16px]"
-          >
-            Hi, I’m Stefanos Kaloulis, a web developer that lives in Patras,
-            Greece. I&apos;m also a Computer Science graduate from the
-            University of Western Macedonia.
-          </p>
-          <p
-            className="text-neutral-300 light:text-stone-700 light:font-[450] transition-all duration-300
-      leading-[1.7rem] text-[16px]"
-          >
-            I’m fluent in English and passionate about creating clean,
-            functional, and visually appealing websites. I’ve worked extensively
-            with HTML, CSS, JavaScript, and TypeScript, and I enjoy building
-            responsive and user-friendly applications using React, Next.js, and
-            Tailwind CSS. I’ve also done several WordPress projects, handling
-            everything from theme customization to plugin integration and site
-            optimization.
-          </p>
-          <p
-            className="text-neutral-300 light:text-stone-700 light:font-[450] transition-all duration-300
-       leading-[1.7rem] text-[16px]"
-          >
-            I love bringing ideas to life on the web and am always exploring new
-            tools and techniques to make my projects even better.
-          </p>
-        </div>
-      </div>
-      {/* <div
-        data-aos="fade-right"
-        className="flex flex-row flex-wrap w-full max-w-232 order-4 mt-20 mb-20 pb-10 pt-10 justify-center items-center"
-      >
-        <h1 className="text-xl font-extrabold text-white transition-all duration-300 light:text-black mr-10">
-          Developer Skills
-        </h1>
-        <div
-          className={`fade flex flex-col relative transition-all duration-300 items-center justify-center gap-10 ${styles.fade} pl-10`}
-        >
-          <div className="flex flex-wrap gap-10 flex-row">
-            <AnimatedCircle label="Next.js" value={90} />
-            <AnimatedCircle label="React.js" value={86} />
-            <AnimatedCircle label="Typescript" value={83} />
-            <AnimatedCircle label="Javascript" value={80} />
-          </div>
-          <div className="flex flex-wrap gap-10 flex-row">
-            <AnimatedCircle label="Tailwind" value={95} />
-            <AnimatedCircle label="HTML" value={95} />
-            <AnimatedCircle label="Node.js" value={78} />
-            <AnimatedCircle label="MongoDB" value={76} />
-            <AnimatedCircle label="Wordpress" value={73} />
-          </div>
-        </div>
-      </div> */}
-      <div className="flex mt-20 gap-10 w-full max-w-232 flex-col min-[925px]:flex-row order-5 mb-24 items-center justify-center">
-        <div
+
+      <div className="w-full max-w-4xl flex flex-col gap-20">
+        {/* ===== Header ===== */}
+        <header data-aos="fade-right">
+          <span className="text-xs uppercase bg-neutral-800 light:bg-stone-300 text-neutral-400 light:text-black px-3 py-2 rounded-md w-max">
+            About
+          </span>
+          <h1 className="mt-4 text-3xl font-extrabold text-white light:text-black">
+            About Me
+          </h1>
+        </header>
+
+        {/* ===== Profile Card + Bio ===== */}
+        <section
           data-aos="fade-right"
-          className="bg-black transition-all duration-300 light:bg-white light:border light:border-stone-300 p-10 rounded-3xl flex flex-col"
+          className="flex flex-col order-1 min-[922px]:flex-row gap-8 justify-center items-center"
         >
-          <h1 className="text-white transition-all duration-300 light:text-black light:font-semibold text-left border-b-[0.5] light:border-stone-800 pb-1">
-            Development Tools
-          </h1>
-          <ul className="text-neutral-400 transition-all duration-300 light:text-stone-800 mt-6 leading-8 list">
-            <li className="flex flex-row items-center gap-2">
-              <FaCheckCircle />
-              Git/GitHub
-            </li>
-            <li className="flex flex-row items-center gap-2">
-              <FaCheckCircle />
-              Vercel
-            </li>
-            <li className="flex flex-row items-center gap-2">
-              <FaCheckCircle />
-              phpMyAdmin
-            </li>
-            <li className="flex flex-row items-center gap-2">
-              <FaCheckCircle />
-              Visual Studio Code
-            </li>
-            <li className="flex flex-row items-center gap-2">
-              <FaCheckCircle />
-              REST/External APIs
-            </li>
-            <li className="flex flex-row items-center gap-2">
-              <FaCheckCircle />
-              Web Server Management
-            </li>
-          </ul>
-        </div>
-        <div
-          data-aos="fade-left"
-          className="bg-black transition-all duration-300 light:bg-white light:border light:border-stone-300 p-10 rounded-3xl"
+          {/* Card */}
+          <div
+            className="w-full min-[922px]:max-w-xs flex justify-center
+    [--card:280px]
+    max-[922px]:[--card:360px]
+    max-[580px]:[--card:300px]
+    max-[430px]:[--card:260px]
+     "
+          >
+            <TiltedCard
+              className={`${styles.hero_card} tiltcard`}
+              containerWidth="var(--card)"
+              containerHeight="var(--card)"
+              imageWidth="var(--card)"
+              imageHeight="var(--card)"
+              rotateAmplitude={6}
+              scaleOnHover={1.05}
+              showMobileWarning={false}
+              showTooltip={false}
+              displayOverlayContent={true}
+              overlayFrontContent={
+                <div className="pointer-events-none">
+                  <button
+                    className={`${styles.card_button} cursor-pointer border border-neutral-300 rounded-full bg-neutral-700/75 text-white px-4 py-1`}
+                  >
+                    Click Me
+                  </button>
+                </div>
+              }
+              overlayBackContent={
+                <ul
+                  className={`${styles.details} flex justify-between h-full items-stretch flex-col gap-3 text-sm max-[922px]:text-[16px] max-[580px]:text-sm p-4`}
+                >
+                  {[
+                    ["Fullname", "Stefanos Kaloulis"],
+                    ["Age", "22"],
+                    ["Birthdate", "27/12/2002"],
+                    [
+                      "Email",
+                      "kalouliss@gmail.com",
+                      "mailto:kalouliss@gmail.com",
+                    ],
+                    ["Phone", "+30 698 009 0854", "tel:+306980090854"],
+                    ["Work", "Remote / On-site / Hybrid"],
+                  ].map(([label, value, link]) => (
+                    <li
+                      key={label}
+                      className="flex flex-row justify-between border-b border-neutral-700 pb-1"
+                    >
+                      <span className="font-bold text-white light:text-black">
+                        {label}:
+                      </span>
+                      {link ? (
+                        <a
+                          href={link}
+                          className="text-neutral-300 light:text-stone-700 hover:text-white"
+                        >
+                          {value}
+                        </a>
+                      ) : (
+                        <span className="text-neutral-300 text-right light:text-stone-700">
+                          {value}
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              }
+            />
+          </div>
+
+          {/* Bio */}
+          <div className="max-w-xl max-[922px]:max-w-md max-[922px]:text-center text-left space-y-3">
+            <p className="text-neutral-300 light:text-stone-700 leading-relaxed">
+              Hi, I’m Stefanos Kaloulis, a web developer based in Patras, Greece
+              and a Computer Science graduate from the University of Western
+              Macedonia.
+            </p>
+
+            <p className="text-neutral-300 light:text-stone-700 leading-relaxed">
+              I&apos;m Fluent in English and passionate about creating clean,
+              functional websites. Experienced with HTML, CSS, JavaScript, and
+              TypeScript, and building responsive, user-friendly apps with
+              React, Next.js, and Tailwind CSS. Also skilled in WordPress theme
+              customization, plugin integration, and site optimization.
+            </p>
+
+            <p className="text-neutral-300 light:text-stone-700 leading-relaxed">
+              I love bringing ideas to life on the web and continuously learning
+              new technologies.
+            </p>
+          </div>
+        </section>
+
+        {/* ===== Tools & Interests ===== */}
+        <section className="grid order-3 grid-cols-1 md:grid-cols-2 gap-10">
+          <div data-aos="fade-right" className="card">
+            <h2 className="section-title">Development Tools</h2>
+            <ul className="list space-y-2 mt-6">
+              {[
+                "Git / GitHub",
+                "Vercel",
+                "phpMyAdmin",
+                "VS Code",
+                "REST APIs",
+                "Server Management",
+              ].map((tool) => (
+                <li key={tool} className="flex items-center gap-2">
+                  <FaCheckCircle /> {tool}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div data-aos="fade-left" className="card">
+            <h2 className="section-title">Interests</h2>
+            <ul className="list space-y-2 mt-6">
+              {[
+                "Dynamic Websites",
+                "UX / UI Design",
+                "API Integration",
+                "Front-End Development",
+                "Back-End Development",
+                "Optimization",
+                "New Technologies",
+              ].map((interest) => (
+                <li key={interest} className="flex items-center gap-2">
+                  <GiLightBulb /> {interest}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* ===== Education & Experience ===== */}
+        <section
+          data-aos="fade-right"
+          className="bg-black order-2 light:bg-white border light:border-stone-300 rounded-xl px-6 py-12 flex justify-evenly max-[850px]:flex-col flex-row gap-12 max-[500px]:gap-18"
         >
-          <h1 className="text-white transition-all duration-300 light:text-black light:font-semibold text-left border-b-[0.5] light:border-stone-800 pb-1">
-            Interests
-          </h1>
-          <ul className="text-neutral-400 transition-all duration-300 light:text-stone-800 mt-6 leading-8 list">
-            <li className="flex flex-row items-center gap-2">
-              <GiLightBulb />
-              Crafting Dynamic Websites
-            </li>
-            <li className="flex flex-row items-center gap-2">
-              <GiLightBulb />
-              Responsive UX/UI Design
-            </li>
-            <li className="flex flex-row items-center gap-2">
-              <GiLightBulb />
-              API Integration
-            </li>
-            <li className="flex flex-row items-center gap-2">
-              <GiLightBulb />
-              Front-End Development
-            </li>
-            <li className="flex flex-row items-center gap-2">
-              <GiLightBulb />
-              Back-End Development
-            </li>
-            <li className="flex flex-row items-center gap-2">
-              <GiLightBulb />
-              Website Maintenance & Optimization
-            </li>
-            <li className="flex flex-row items-center gap-2">
-              <GiLightBulb />
-              Adaptation to New Technologies
-            </li>
-          </ul>
-        </div>
+          {/* Education */}
+          <div className="flex flex-col max-[850px]:items-center max-[850px]:gap-6 justify-center">
+            <h1 className="text-white max-[850px]:font-black font-bold light:text-black transition-all duration-300 light:font-black max-[850px]:text-2xl text-xl">
+              Education
+            </h1>
+            <div className="flex flex-col h-full items-center justify-center">
+              <span className="text-white light:text-black transition-all duration-300 font-bold text-lg px-4 max-[850px]:py-0 py-3 rounded-full">
+                2020 - 2025
+              </span>
+              <div>
+                <span className="text-white text-center light:text-black transition-all duration-300 light:font-semibold text-lg block">
+                  University of Western Macedonia
+                </span>
+                <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[15px] text-center block">
+                  BSc in Computer Science
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Experience */}
+          <div className="flex flex-col max-[850px]:px-6 max-[850px]:mx-auto">
+            <h1 className="text-white max-[850px]:text-center max-[850px]:font-black font-bold light:text-black transition-all duration-300 light:font-black max-[850px]:text-2xl text-xl">
+              Experience
+            </h1>
+            <div className="space-y-6">
+              {[
+                ["2024 (Jul – Oct)", "Omega Systems", "Web Developer Intern"],
+                [
+                  "2024 (Jan - Nov)",
+                  "CineGame Critic",
+                  "Next.js FullStack App",
+                ],
+                ["2024 (Oct - Dec)", "Set Website", "FullStack Developer"],
+                ["2023 (Oct - Dec)", "Boston Kitchen", "Web Designer"],
+                ["2023 (Sep - Oct)", "Nekenergy", "Web Developer"],
+              ].map(([date, company, role]) => (
+                <div
+                  key={company}
+                  className="flex max-[555px]:items-center max-[500px]:flex-col mt-8 flex-row max-[500px]:gap-2.5 gap-5"
+                >
+                  <span className="text-neutral-400 w-max text-sm transition-all duration-300 bg-neutral-900 light:text-stone-800 light:bg-stone-200 light:border light:border-stone-400 px-5 py-3 rounded-full">
+                    {date}
+                  </span>
+                  <div>
+                    <p className="text-white max-[500px]:text-center light:text-black font-semibold">
+                      {company}
+                    </p>
+                    <p className="text-neutral-400 text-sm">{role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
-      <div
-        data-aos="fade-right"
-        className="flex w-full max-w-232 max-[842px]:flex-col flex-row order-3 transition-all duration-300 bg-black light:bg-white light:border light:border-stone-300 justify-evenly max-[842px]:gap-18 gap-10 mt-24 px-6 py-12 rounded-xl"
-      >
-        <div className="flex flex-col max-[842px]:items-center max-[842px]:gap-6 justify-center">
-          <h1 className="text-white max-[842px]:font-black font-bold light:text-black transition-all duration-300 light:font-black max-[842px]:text-2xl text-xl">
-            Education
-          </h1>
-          <div className="flex flex-col h-full items-center justify-center">
-            <span className="text-white light:text-black transition-all duration-300 font-bold text-lg px-4 max-[842px]:py-0 py-3 rounded-full">
-              2020 - 2025
-            </span>
-            <div>
-              <span className="text-white text-center light:text-black transition-all duration-300 light:font-semibold text-lg block">
-                University of Western Macedonia
-              </span>
-              <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[15px] text-center block">
-                BSc in Computer Science
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col max-[842px]:px-6 max-[842px]:mx-auto">
-          <h1 className="text-white max-[842px]:font-black font-bold self-center light:text-black transition-all duration-300 light:font-black max-[842px]:text-2xl text-xl">
-            Experience
-          </h1>
-          <div className="flex max-[555px]:items-center max-[555px]:flex-col mt-8 flex-row max-[555px]:gap-2.5 gap-5">
-            <span className="text-neutral-400 w-max text-sm transition-all duration-300 bg-neutral-900 light:text-stone-800 light:bg-stone-200 light:border light:border-stone-400 px-5 py-3 rounded-full">
-              2024 (Jul - Oct)
-            </span>
-            <div className="max-[555px]:text-center">
-              <span className="text-white transition-all duration-300 light:text-stone-700 light:font-semibold block">
-                Omega Systems
-              </span>
-              <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[13px] block">
-                Web Developer - Internship
-              </span>
-            </div>
-          </div>
-          <div className="flex max-[555px]:items-center max-[555px]:flex-col flex-row mt-10 max-[555px]:gap-2.5 gap-5">
-            <span className="text-neutral-400 transition-all duration-300 text-sm bg-neutral-900 light:text-stone-800 light:bg-stone-200 light:border light:border-stone-400 px-4 py-3 rounded-full">
-              2024 (Jan - Nov)
-            </span>
-            <div className="max-[555px]:text-center">
-              <span className="text-white transition-all duration-300 light:text-stone-700 light:font-semibold block">
-                CineGame Critic website
-              </span>
-              <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[13px] block">
-                Next.js FullStack Application
-              </span>
-            </div>
-          </div>
-          <div className="flex max-[555px]:items-center max-[555px]:flex-col flex-row mt-10 max-[555px]:gap-2.5 gap-5">
-            <span className="text-neutral-400 transition-all duration-300 text-sm bg-neutral-900 light:text-stone-800 light:bg-stone-200 light:border light:border-stone-400 px-4 py-3 rounded-full">
-              2024 (Oct - Dec)
-            </span>
-            <div className="max-[555px]:text-center">
-              <span className="text-white transition-all duration-300 light:text-stone-700 light:font-semibold block">
-                Set Website
-              </span>
-              <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[13px] block">
-                FullStack Web Developer
-              </span>
-            </div>
-          </div>
-          <div className="flex max-[555px]:items-center max-[555px]:flex-col flex-row mt-10 max-[555px]:gap-2.5 gap-5">
-            <span className="text-neutral-400 transition-all duration-300 text-sm bg-neutral-900 light:text-stone-800 light:bg-stone-200 light:border light:border-stone-400 px-4 py-3 rounded-full">
-              2023 (Oct - Dec)
-            </span>
-            <div className="max-[555px]:text-center">
-              <span className="text-white transition-all duration-300 light:text-stone-700 light:font-semibold block">
-                Boston Kitchen Website
-              </span>
-              <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[13px] block">
-                Web Designer
-              </span>
-            </div>
-          </div>
-          <div className="flex max-[555px]:items-center max-[555px]:flex-col flex-row mt-10 max-[555px]:gap-2.5 gap-5">
-            <span className="text-neutral-400 transition-all duration-300 text-sm bg-neutral-900 light:text-stone-800 light:bg-stone-200 light:border light:border-stone-400 px-4 py-3 rounded-full">
-              2023 (Sep - Oct)
-            </span>
-            <div className="max-[555px]:text-center">
-              <span className="text-white transition-all duration-300 light:text-stone-700 light:font-semibold block">
-                Nekenergy Website
-              </span>
-              <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[13px] block">
-                Web Developer
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 }

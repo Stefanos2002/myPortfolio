@@ -118,7 +118,7 @@ export default function TiltedCard({
   return (
     <figure
       ref={ref}
-      className={`relative w-full h-full [perspective:800px] flex flex-col items-center justify-center}`}
+      className={`relative w-full h-full perspective-midrange flex flex-col items-center justify-center}`}
       style={{
         height: containerHeight,
         width: containerWidth,
@@ -134,25 +134,29 @@ export default function TiltedCard({
       )}
 
       <motion.div
-        className="relative [transform-style:preserve-3d]"
+        className="relative"
         onClick={handleClick}
         style={{
           width: imageWidth,
           height: imageHeight,
-          rotateX: rotateX, // tilt only on front
+          rotateX: rotateX,
           rotateY: combinedRotateY,
           scale,
+          transformStyle: "preserve-3d",
         }}
       >
         {/* FRONT SIDE */}
         <div
-          className="absolute inset-0 backface-hidden cursor-pointer"
-          style={{ pointerEvents: flipped ? "none" : "auto" }}
+          className="absolute inset-0 cursor-pointer"
+          style={{
+            backfaceVisibility: "hidden",
+            pointerEvents: flipped ? "none" : "auto",
+          }}
         >
           <motion.img
             src={imageSrc}
             alt={""}
-            className={`absolute top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)] ${
+            className={`absolute top-0 left-0 object-cover rounded-[15px] will-change-transform ${
               className ?? ""
             }`}
             style={{
@@ -166,7 +170,7 @@ export default function TiltedCard({
           />
 
           {overlayFrontContent && (
-            <motion.div className="absolute bottom-6 right-8 z-2 will-change-transform transform-[translateZ(30px)]">
+            <motion.div className="absolute bottom-6 right-8 z-2 will-change-transform">
               {overlayFrontContent}
             </motion.div>
           )}
@@ -174,14 +178,17 @@ export default function TiltedCard({
 
         {/* BACK SIDE */}
         <div
-          className="absolute inset-0 rounded-[15px] bg-black light:bg-white light:border light:border-stone-300 px-6 flex flex-col justify-center transform-[rotateY(180deg)] backface-hidden cursor-pointer"
-          style={{ pointerEvents: flipped ? "auto" : "none" }}
-          onClick={(e) => {
-            // Only flip back if clicking empty area
-            if ((e.target as HTMLElement).tagName === "DIV") {
-              handleClick();
-            }
+          className="absolute overflow-auto inset-0 rounded-[15px] bg-black light:bg-white light:border light:border-stone-300 px-4 max-[922px]:px-3.5 max-[430px]:px-1.5 py-2 flex flex-col transform-[rotateY(180deg)] cursor-pointer"
+          style={{
+            pointerEvents: flipped ? "auto" : "none",
+            backfaceVisibility: "hidden",
           }}
+          // onClick={(e) => {
+          //   // Only flip back if clicking empty area
+          //   if ((e.target as HTMLElement).tagName === "DIV") {
+          //     handleClick();
+          //   }
+          // }}
         >
           {overlayBackContent}
         </div>
@@ -189,7 +196,7 @@ export default function TiltedCard({
 
       {showTooltip && (
         <motion.figcaption
-          className="pointer-events-none absolute left-0 top-0 rounded-[4px] bg-white px-[10px] py-[4px] text-[10px] text-[#2d2d2d] opacity-0 z-[3] hidden sm:block"
+          className="pointer-events-none absolute left-0 top-0 rounded-lg bg-white px-[10px] py-[4px] text-[10px] text-[#2d2d2d] opacity-0 z-[3] hidden sm:block"
           style={{
             x,
             y,
