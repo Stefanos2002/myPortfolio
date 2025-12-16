@@ -9,29 +9,27 @@ import SplitText from "../SplitText";
 const projects = [
   {
     title: "Cinegame Critic",
-    // FIX: Put Cloudinary URL here in 'src'
-    src: "https://res.cloudinary.com/druxzsmzm/video/upload/f_auto,q_auto/v1765906380/CGC_oxbbdm.mp4",
-    // FIX: Put the actual website URL here in 'link'
+    src: process.env.NEXT_PUBLIC_VID_CGC || "",
     link: "https://www.cinegame-critic.com/",
   },
   {
     title: "SET",
-    src: "https://res.cloudinary.com/druxzsmzm/video/upload/f_auto,q_auto/v1765906385/SET_hhwegk.mp4",
+    src: process.env.NEXT_PUBLIC_VID_SET || "",
     link: "https://www.set.gr/",
   },
   {
     title: "IGNITE",
-    src: "https://res.cloudinary.com/druxzsmzm/video/upload/f_auto,q_auto/v1765906391/IGNITE_n6ahxc.mp4",
+    src: process.env.NEXT_PUBLIC_VID_IGNITE || "",
     link: "https://ignite.construction/",
   },
   {
     title: "Boston Kitchen",
-    src: "https://res.cloudinary.com/druxzsmzm/video/upload/f_auto,q_auto/v1765906676/BOSTON_qgdax5.mp4",
+    src: process.env.NEXT_PUBLIC_VID_BOSTON || "",
     link: "https://www.bostonkitchen.com/",
   },
   {
     title: "Nekenergy",
-    src: "https://res.cloudinary.com/druxzsmzm/video/upload/f_auto,q_auto/v1765906382/NEK_md2huo.mp4",
+    src: process.env.NEXT_PUBLIC_VID_NEK || "",
     link: "https://nekenergy.gr/",
   },
 ];
