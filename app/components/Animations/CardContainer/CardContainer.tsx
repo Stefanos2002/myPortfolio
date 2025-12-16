@@ -52,29 +52,48 @@ const Card = ({
   targetScale: number;
 }) => {
   const container = useRef<HTMLDivElement>(null);
-
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
     <div
       ref={container}
-      className="sticky top-0 group flex flex-col items-center justify-center"
+      // CHANGED: Reduced mb-20 to mb-12 so the gap between cards is cleaner.
+      className="sticky top-0 max-[1000px]:static max-[1000px]:h-auto max-[1000px]:mb-12 group flex flex-col items-center justify-center"
     >
       <motion.div
         style={{
           scale,
-          top: `calc(-25vh + ${i * 20 + 250}px)`,
+          top: `calc(var(--card-top) + ${i * 20}px)`,
         }}
-        className="rounded-4xl relative -top-1/4 flex h-134 w-[60vw] origin-top flex-col overflow-hidden"
+        className="
+          relative flex flex-col origin-top overflow-hidden rounded-4xl
+          
+          /* === BELOW 1000PX (Normal Scroll Flow) === */
+          max-[1000px]:!top-auto
+          max-[1000px]:!transform-none
+          max-[1000px]:w-full
+          
+          /* CHANGED: Replaced 'h-[60vh]' with 'aspect-video h-auto'.
+             This forces the box to be exactly the size of the video (16:9),
+             removing the empty internal space. */
+          max-[1000px]:h-auto
+          max-[1000px]:aspect-video
+          
+          /* === ABOVE 1000PX (Desktop Sticky Stack) === */
+          min-[1000px]:w-auto 
+          min-[1000px]:h-auto 
+          min-[1000px]:max-w-4xl 
+          min-[1000px]:max-h-134
+          min-[1000px]:[--card-top:calc(-25vh+300px)]
+        "
       >
-        {/* <Image src={src} alt={title} fill className="object-cover" /> */}
         <video
           src={src}
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain rounded-4xl bg-neutral-900"
         />
         <div className="absolute inset-0 bg-black/70 bg-opacity-50 opacity-0 flex flex-col items-center justify-center text-center text-white transition-opacity duration-300 ease-in-out group-hover:opacity-100 rounded-4xl">
           <h2 className="text-xl uppercase font-semibold mb-4">{title}</h2>
@@ -103,13 +122,14 @@ export default function CardContainer() {
     <ReactLenis root>
       <AOSWrapper />
       <main
-        data-aos="fade-up"
         ref={container}
-        className="relative flex order-2 w-full flex-col items-center justify-center pb-[38vh]"
+        // CHANGED: 'max-[1000px]:pb-0' - Removes the huge bottom padding needed for sticky scroll
+        // since we are just stacking them normally now.
+        className="relative flex order-2 w-full flex-col items-center justify-center pt-10 pb-[38vh] max-[1000px]:pb-0"
       >
         <SplitText
           text="Check out some of my past projects"
-          className="text-2xl transition-all duration-300 text-center mt-20 p-5 px-8 border-[0.5] text-white light:text-black light:border-black light:border-2"
+          className="text-2xl max-[650px]:text-xl transition-all duration-300 text-center max-[1000px]:mb-26 p-5 px-8 border-[0.5] text-white light:text-black light:border-black light:border-2"
           delay={70}
           duration={0.3}
           ease="power3.out"
@@ -121,6 +141,8 @@ export default function CardContainer() {
           textAlign="center"
         />
         {projects.map((project, i) => {
+          // Logic remains mainly for desktop.
+          // On mobile, the scale is disabled via CSS !transform-none.
           const targetScale = Math.max(
             0.5,
             1 - (projects.length - i - 1) * 0.1

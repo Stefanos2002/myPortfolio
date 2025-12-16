@@ -178,7 +178,7 @@ export default function TiltedCard({
 
         {/* BACK SIDE */}
         <div
-          className="absolute overflow-auto inset-0 rounded-[15px] bg-black light:bg-white light:border light:border-stone-300 px-4 max-[922px]:px-3.5 max-[430px]:px-1.5 py-2 flex flex-col transform-[rotateY(180deg)] cursor-pointer"
+          className="absolute overflow-auto inset-0 rounded-[15px] bg-black light:bg-white light:border light:border-stone-300 px-1 py-1.5 flex flex-col transform-[rotateY(180deg)] cursor-pointer"
           style={{
             pointerEvents: flipped ? "auto" : "none",
             backfaceVisibility: "hidden",

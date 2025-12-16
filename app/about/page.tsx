@@ -19,7 +19,7 @@ export default function About() {
     { label: "WordPress", value: 73 },
   ];
   return (
-    <section className="w-full min-h-screen overflow-x-hidden flex justify-center px-10 min-[1060px]:px-20 max-[520px]:px-5 pt-35 xl:pt-20">
+    <section className="w-full min-h-screen overflow-x-hidden flex justify-center px-10 min-[1060px]:px-20 max-[520px]:px-5 pt-40 xl:pt-20">
       <AOSWrapper />
 
       <div className="w-full max-w-4xl flex flex-col gap-20">
@@ -35,17 +35,28 @@ export default function About() {
 
         {/* ===== Profile Card + Bio ===== */}
         <section
-          data-aos="fade-right"
-          className="flex flex-col order-1 min-[922px]:flex-row gap-8 justify-center items-center"
+          // data-aos="fade-right"
+          // CHANGED: Use 'flow-root' (or block) instead of flex.
+          // removed gap-8 (we use margins on the image now).
+          className="flow-root order-1"
         >
           {/* Card */}
           <div
-            className="w-full min-[922px]:max-w-xs flex justify-center
+            // CHANGED:
+            // 1. float-none mx-auto mb-6 -> Default behavior (stacked, centered, margin bottom)
+            // 2. min-[520px]:... -> Only applies float and side margin if screen > 520px
+            className="
+    shrink-0 flex justify-center
     [--card:280px]
-    max-[922px]:[--card:360px]
-    max-[580px]:[--card:300px]
-    max-[430px]:[--card:260px]
-     "
+    
+    float-none 
+    mx-auto 
+    mb-6
+
+    min-[520px]:float-left 
+    min-[520px]:mr-8 
+    min-[520px]:mb-4
+  "
           >
             <TiltedCard
               className={`${styles.hero_card} tiltcard`}
@@ -69,7 +80,7 @@ export default function About() {
               }
               overlayBackContent={
                 <ul
-                  className={`${styles.details} flex justify-between h-full items-stretch flex-col gap-3 text-sm max-[922px]:text-[16px] max-[580px]:text-sm p-4`}
+                  className={`${styles.details} flex justify-between h-full items-stretch flex-col gap-3 text-sm p-4`}
                 >
                   {[
                     ["Fullname", "Stefanos Kaloulis"],
@@ -110,7 +121,8 @@ export default function About() {
           </div>
 
           {/* Bio */}
-          <div className="max-w-xl max-[922px]:max-w-2xl max-[922px]:text-center text-left space-y-3">
+          {/* CHANGED: Removed flex-1. Kept space-y-3 for paragraph spacing. */}
+          <div className="space-y-3 text-left">
             <p className="text-neutral-300 transition-colors duration-300 light:text-stone-700 leading-relaxed">
               Hi, I’m Stefanos Kaloulis, a web developer based in Patras, Greece
               and a Computer Science graduate from the University of Western

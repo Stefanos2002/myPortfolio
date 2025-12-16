@@ -67,7 +67,7 @@ export default function ServiceClient({ data }: { data: ServiceData[] }) {
       <AOSWrapper />
       <div
         // data-aos="flip-down"
-        className="grid grid-cols-1 min-[768px]:grid-cols-2 min-[1140px]:grid-cols-3 gap-10 order-2 mb-24"
+        className="grid grid-cols-1 min-[665px]:grid-cols-2 min-[1140px]:grid-cols-3 min-[740px]:gap-10 gap-6 order-2 mb-24"
       >
         {data.map((item, index) => (
           <ServiceCard
@@ -96,7 +96,7 @@ export default function ServiceClient({ data }: { data: ServiceData[] }) {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className={`bg-neutral-900 light:bg-white text-neutral-200 light:text-black p-10 rounded-2xl w-4/5 min-[1140px]:w-3/5 h-3/4 overflow-y-auto ${styles.scrollbar} relative`}
+            className={`bg-neutral-900 light:bg-white text-neutral-200 light:text-black p-10 max-[768px]:p-8 rounded-2xl w-[90%] min-[920px]:w-5/6 min-[1100px]:w-[75%] min-[1120px]:w-[70%] min-[1200px]:w-3/5 h-3/4 overflow-y-auto ${styles.scrollbar} relative`}
           >
             <button
               onClick={closeModal}

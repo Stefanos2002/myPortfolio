@@ -117,20 +117,20 @@ export default function Services() {
   ];
 
   return (
-    <div className="flex px-10 min-[830px]:px-20 min-h-screen relative pt-24 xl:pt-10 flex-col w-full">
+    <div className="flex justify-center items-center px-5 min-[740px]:px-10 min-[830px]:px-20 min-h-screen relative pt-40 xl:pt-10 flex-col w-full">
       <AOSWrapper />
-      <div
-        data-aos="fade-right"
-        className="flex w-full pb-10 pt-10 flex-col order-1"
-      >
-        <span className="text-neutral-400 transition-colors duration-300 light:text-black light:border-[0.5] light:border-stone-400 text-xs mb-4 bg-neutral-800 light:bg-stone-300 light:font-semibold w-max uppercase p-3">
-          Services
-        </span>
-        <h1 className="text-white light:text-black transition-all duration-300 font-extrabold text-3xl">
-          What I Do
-        </h1>
+      <div className="w-full max-w-6xl justify-center flex flex-col gap-20">
+        {/* ===== Header ===== */}
+        <header data-aos="fade-right">
+          <span className="text-neutral-400 transition-colors duration-300 light:text-black light:border-[0.5] light:border-stone-400 text-xs mb-4 bg-neutral-800 light:bg-stone-300 light:font-semibold w-max uppercase p-3">
+            Services
+          </span>
+          <h1 className="text-white mt-6 light:text-black transition-all duration-300 font-extrabold text-3xl">
+            What I Do
+          </h1>
+        </header>
+        <ServiceClient data={data} />
       </div>
-      <ServiceClient data={data} />
     </div>
   );
 }

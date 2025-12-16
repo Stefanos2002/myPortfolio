@@ -45,7 +45,7 @@ export default function ServiceCard({
           {title}
         </h1>
 
-        <p className="text-neutral-400 transition-all duration-300 light:text-stone-800 text-[15px]">
+        <p className="text-neutral-400 max-w-3xs transition-all duration-300 light:text-stone-800 text-[15px]">
           {description}
         </p>
 

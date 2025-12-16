@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar/Navbar";
 import ThemeToggle from "./components/ToggleTheme/ToggleTheme";
-import { SlMenu } from "react-icons/sl";
-import Link from "next/link";
-import MenuToggle from "./components/MenuToggle/MenuToggle";
-import Header from "./components/Header/Header";
 import DesktopSidebar from "./components/DesktopSidebar/DesktopSidebar";
 import MobileSidebar from "./components/MobileSidebar/MobileSidebar";
 
@@ -16,7 +11,7 @@ const montSerrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "myPortfolio",
+  title: "Kaloulis-dev",
   description: "Creating my portfolio",
 };
 
