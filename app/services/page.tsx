@@ -117,7 +117,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="flex justify-center items-center px-5 min-[740px]:px-10 min-[830px]:px-20 min-h-screen relative pt-40 xl:pt-10 flex-col w-full">
+    <main className="flex justify-center items-center px-5 min-[740px]:px-10 min-[830px]:px-20 min-h-screen relative pt-40 xl:pt-20 flex-col w-full">
       <AOSWrapper />
       <div className="w-full max-w-6xl justify-center flex flex-col gap-20">
         {/* ===== Header ===== */}
@@ -131,6 +131,6 @@ export default function Services() {
         </header>
         <ServiceClient data={data} />
       </div>
-    </div>
+    </main>
   );
 }

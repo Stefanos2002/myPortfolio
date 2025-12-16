@@ -35,7 +35,7 @@ export default function About() {
 
         {/* ===== Profile Card + Bio ===== */}
         <section
-          // data-aos="fade-right"
+          data-aos="fade-right"
           // CHANGED: Use 'flow-root' (or block) instead of flex.
           // removed gap-8 (we use margins on the image now).
           className="flow-root order-1"
@@ -121,8 +121,7 @@ export default function About() {
           </div>
 
           {/* Bio */}
-          {/* CHANGED: Removed flex-1. Kept space-y-3 for paragraph spacing. */}
-          <div className="space-y-3 text-left">
+          <div className="space-y-3 text-left max-[520px]:text-center">
             <p className="text-neutral-300 transition-colors duration-300 light:text-stone-700 leading-relaxed">
               Hi, I’m Stefanos Kaloulis, a web developer based in Patras, Greece
               and a Computer Science graduate from the University of Western

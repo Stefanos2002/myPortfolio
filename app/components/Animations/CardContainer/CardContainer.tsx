@@ -10,27 +10,27 @@ const projects = [
   {
     title: "Cinegame Critic",
     src: "/videos/CGC.mp4",
-    link: "https://www.cinegame-critic.com/",
+    link: "https://res.cloudinary.com/druxzsmzm/video/upload/f_auto,q_auto/v1765906380/CGC_oxbbdm.mp4",
   },
   {
     title: "SET",
     src: "/videos/SET.mp4",
-    link: "https://www.set.gr/",
+    link: "https://res.cloudinary.com/druxzsmzm/video/upload/f_auto,q_auto/v1765906385/SET_hhwegk.mp4",
   },
   {
     title: "IGNITE",
     src: "/videos/IGNITE.mp4",
-    link: "https://ignite.construction/",
+    link: "https://res.cloudinary.com/druxzsmzm/video/upload/f_auto,q_auto/v1765906391/IGNITE_n6ahxc.mp4",
   },
   {
     title: "Boston Kitchen",
     src: "/videos/BOSTON.mp4",
-    link: "https://www.bostonkitchen.com/",
+    link: "https://res.cloudinary.com/druxzsmzm/video/upload/f_auto,q_auto/v1765906676/BOSTON_qgdax5.mp4",
   },
   {
     title: "Nekenergy",
     src: "/videos/NEK.mp4",
-    link: "https://nekenergy.gr/",
+    link: "https://res.cloudinary.com/druxzsmzm/video/upload/f_auto,q_auto/v1765906382/NEK_md2huo.mp4",
   },
 ];
 
@@ -57,7 +57,6 @@ const Card = ({
   return (
     <div
       ref={container}
-      // CHANGED: Reduced mb-20 to mb-12 so the gap between cards is cleaner.
       className="sticky top-0 max-[1000px]:static max-[1000px]:h-auto max-[1000px]:mb-12 group flex flex-col items-center justify-center"
     >
       <motion.div
@@ -65,27 +64,8 @@ const Card = ({
           scale,
           top: `calc(var(--card-top) + ${i * 20}px)`,
         }}
-        className="
-          relative flex flex-col origin-top overflow-hidden rounded-4xl
-          
-          /* === BELOW 1000PX (Normal Scroll Flow) === */
-          max-[1000px]:!top-auto
-          max-[1000px]:!transform-none
-          max-[1000px]:w-full
-          
-          /* CHANGED: Replaced 'h-[60vh]' with 'aspect-video h-auto'.
-             This forces the box to be exactly the size of the video (16:9),
-             removing the empty internal space. */
-          max-[1000px]:h-auto
-          max-[1000px]:aspect-video
-          
-          /* === ABOVE 1000PX (Desktop Sticky Stack) === */
-          min-[1000px]:w-auto 
-          min-[1000px]:h-auto 
-          min-[1000px]:max-w-4xl 
-          min-[1000px]:max-h-134
-          min-[1000px]:[--card-top:calc(-25vh+300px)]
-        "
+        // REMOVED COMMENTS FROM INSIDE THE STRING
+        className="relative flex flex-col origin-top overflow-hidden rounded-4xl max-[1000px]:!top-auto max-[1000px]:!transform-none max-[1000px]:w-full max-[1000px]:h-auto max-[1000px]:aspect-video min-[1000px]:w-auto min-[1000px]:h-auto min-[1000px]:max-w-4xl min-[1000px]:max-h-134 min-[1000px]:[--card-top:calc(-25vh+300px)]"
       >
         <video
           src={src}
@@ -122,6 +102,7 @@ export default function CardContainer() {
     <ReactLenis root>
       <AOSWrapper />
       <main
+        data-aos="fade-right"
         ref={container}
         // CHANGED: 'max-[1000px]:pb-0' - Removes the huge bottom padding needed for sticky scroll
         // since we are just stacking them normally now.

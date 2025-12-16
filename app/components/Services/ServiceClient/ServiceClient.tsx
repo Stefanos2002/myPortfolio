@@ -66,7 +66,7 @@ export default function ServiceClient({ data }: { data: ServiceData[] }) {
     <>
       <AOSWrapper />
       <div
-        // data-aos="flip-down"
+        data-aos="flip-down"
         className="grid grid-cols-1 min-[665px]:grid-cols-2 min-[1140px]:grid-cols-3 min-[740px]:gap-10 gap-6 order-2 mb-24"
       >
         {data.map((item, index) => (
