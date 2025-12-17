@@ -57,7 +57,7 @@ const Card = ({
   return (
     <div
       ref={container}
-      className="sticky top-0 max-[1000px]:static max-[1000px]:h-auto max-[1000px]:mb-12 group flex flex-col items-center justify-center"
+      className="sticky top-0 max-[1000px]:static max-[1000px]:h-auto max-[1000px]:mb-15 group flex flex-col items-center justify-center"
     >
       <motion.div
         style={{
@@ -75,7 +75,7 @@ const Card = ({
           playsInline
           className="w-full h-full object-contain rounded-4xl bg-neutral-900"
         />
-        <div className="absolute inset-0 bg-black/70 bg-opacity-50 opacity-0 flex flex-col items-center justify-center text-center text-white transition-opacity duration-300 ease-in-out group-hover:opacity-100 rounded-4xl">
+        <div className="absolute inset-0 bg-black/70 max-[850px]:bg-black/50 bg-opacity-50 opacity-0 flex flex-col items-center justify-center text-center text-white transition-opacity duration-300 ease-in-out group-hover:opacity-100 max-[850px]:opacity-100 rounded-4xl">
           <h2 className="text-xl uppercase font-semibold mb-4">{title}</h2>
           {link && (
             <a
@@ -102,15 +102,15 @@ export default function CardContainer() {
     <ReactLenis root>
       <AOSWrapper />
       <main
-        data-aos="fade-right"
+        // data-aos="fade-right"
         ref={container}
         // CHANGED: 'max-[1000px]:pb-0' - Removes the huge bottom padding needed for sticky scroll
         // since we are just stacking them normally now.
-        className="relative flex order-2 w-full flex-col items-center justify-center pt-10 pb-[38vh] max-[1000px]:pb-0"
+        className="relative flex order-2 w-full flex-col items-center justify-center pt-10 pb-[38vh] max-[1000px]:pb-6"
       >
         <SplitText
           text="Check out some of my past projects"
-          className="text-2xl max-[650px]:text-xl transition-all duration-300 text-center max-[1000px]:mb-26 p-5 px-8 border-[0.5] text-white light:text-black light:border-black light:border-2"
+          className="text-2xl max-[650px]:text-xl max-[520px]:text-lg mx-4 transition-all duration-300 text-center max-[1000px]:mb-26 p-5 px-8 border-[0.5] text-white light:text-black light:border-black light:border-2"
           delay={70}
           duration={0.3}
           ease="power3.out"

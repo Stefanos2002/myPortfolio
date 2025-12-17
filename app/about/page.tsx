@@ -200,8 +200,8 @@ export default function About() {
         </section>
         {/* ===== Developer Skills ===== */}
         <div
-          data-aos="fade-right"
-          className="flex flex-col my-8 md:my-12 lg:flex-row order-3 justify-center items-center"
+          // data-aos="fade-right"
+          className="flex flex-col my-0 lg:my-8 lg:flex-row order-3 justify-center items-center"
         >
           <h1 className="lg:text-xl transition-colors duration-300 text-2xl underline lg:no-underline text-center font-extrabold text-white light:text-black mb-13 mr-0 lg:mb-0 lg:mr-10">
             Developer Skills
@@ -230,14 +230,14 @@ export default function About() {
               Education
             </h1>
             <div className="flex flex-col h-full items-center justify-center">
-              <span className="text-white light:text-black transition-all duration-300 font-bold text-lg px-4 max-[850px]:py-0 py-3 rounded-full">
+              <span className="text-white light:text-black transition-all duration-300 font-bold text-lg max-[405px]:text-[16px] px-4 max-[850px]:py-0 py-3 rounded-full">
                 2020 - 2025
               </span>
               <div>
-                <span className="text-white text-center light:text-black transition-all duration-300 light:font-semibold text-lg block">
+                <span className="text-white text-center light:text-black transition-all duration-300 font-bold text-lg max-[405px]:text-[16px] block">
                   University of Western Macedonia
                 </span>
-                <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[15px] text-center block">
+                <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[15px] max-[405px]:text-[14px] text-center block">
                   BSc in Computer Science
                 </span>
               </div>
@@ -272,7 +272,7 @@ export default function About() {
                     <p className="text-white transition-colors duration-300 max-[500px]:text-center light:text-black font-semibold">
                       {company}
                     </p>
-                    <p className="text-neutral-400 transition-colors duration-300 text-sm">
+                    <p className="text-neutral-400 max-[500px]:text-center transition-colors duration-300 text-sm">
                       {role}
                     </p>
                   </div>
