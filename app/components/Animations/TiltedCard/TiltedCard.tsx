@@ -155,7 +155,7 @@ export default function TiltedCard({
         >
           <motion.img
             src={imageSrc}
-            alt={""}
+            alt={"profile_image"}
             className={`absolute top-0 left-0 object-cover rounded-[15px] will-change-transform ${
               className ?? ""
             }`}
