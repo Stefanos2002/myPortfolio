@@ -81,17 +81,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-
-  // Canonical URL prevents duplicate content issues
-  alternates: {
-    canonical: "/",
-  },
-
-  icons: {
-    icon: "/images/favicon.ico", // Browser tab
-    shortcut: "/images/android-chrome-192x192.png", // Android/Modern browsers
-    apple: "/images/apple-touch-icon.png", // iPhone Home Screen
-  },
 };
 
 const jsonLd = {
