@@ -102,7 +102,7 @@ export default function CardContainer() {
     <ReactLenis root>
       <AOSWrapper />
       <main
-        // data-aos="fade-right"
+        data-aos="fade-right"
         ref={container}
         // CHANGED: 'max-[1000px]:pb-0' - Removes the huge bottom padding needed for sticky scroll
         // since we are just stacking them normally now.

@@ -55,4 +55,5 @@
 
 .hero_card {
   --card-img: url("/images/profileDark.jpg");
+  /* color: transparent; */
 }

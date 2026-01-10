@@ -153,7 +153,7 @@ export default function TiltedCard({
             pointerEvents: flipped ? "none" : "auto",
           }}
         >
-          <motion.img
+          {/* <motion.img
             src={imageSrc}
             alt={"profile_image"}
             className={`absolute top-0 left-0 object-cover rounded-[15px] will-change-transform ${
@@ -163,6 +163,22 @@ export default function TiltedCard({
               width: imageWidth,
               height: imageHeight,
               backgroundImage: "var(--card-img)",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          /> */}
+          <motion.div
+            // CHANGED: motion.img -> motion.div
+            // REMOVED: src and alt (divs don't need them)
+
+            className={`absolute top-0 left-0 object-cover rounded-[15px] will-change-transform ${
+              className ?? ""
+            }`}
+            style={{
+              width: imageWidth,
+              height: imageHeight,
+              backgroundImage: "var(--card-img)", // Your image works because of this
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",

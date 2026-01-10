@@ -24,7 +24,7 @@ export default function About() {
 
       <div className="w-full max-w-4xl flex flex-col gap-20">
         {/* ===== Header ===== */}
-        <header data-aos="fade-right">
+        <header data-aos="fade-right" className="sm:text-left text-center">
           <span className="text-neutral-400 transition-colors duration-300 light:text-black light:border-[0.5] light:border-stone-400 text-xs mb-4 bg-neutral-800 light:bg-stone-300 light:font-semibold w-max uppercase p-3">
             About
           </span>
