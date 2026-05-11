@@ -13,24 +13,14 @@ const projects = [
     link: "https://www.cinegame-critic.com/",
   },
   {
+    title: "Spoudas Paint",
+    src: process.env.NEXT_PUBLIC_VID_SPOUDASPAINT || "",
+    link: "https://www.spoudaspaint.gr/",
+  },
+  {
     title: "SET",
     src: process.env.NEXT_PUBLIC_VID_SET || "",
     link: "https://www.set.gr/",
-  },
-  {
-    title: "IGNITE",
-    src: process.env.NEXT_PUBLIC_VID_IGNITE || "",
-    link: "https://ignite.construction/",
-  },
-  {
-    title: "Boston Kitchen",
-    src: process.env.NEXT_PUBLIC_VID_BOSTON || "",
-    link: "https://www.bostonkitchen.com/",
-  },
-  {
-    title: "Nekenergy",
-    src: process.env.NEXT_PUBLIC_VID_NEK || "",
-    link: "https://nekenergy.gr/",
   },
 ];
 
@@ -126,7 +116,7 @@ export default function CardContainer() {
           // On mobile, the scale is disabled via CSS !transform-none.
           const targetScale = Math.max(
             0.5,
-            1 - (projects.length - i - 1) * 0.1
+            1 - (projects.length - i - 1) * 0.1,
           );
           return (
             <Card

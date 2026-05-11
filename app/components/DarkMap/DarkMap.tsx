@@ -62,14 +62,10 @@ const darkStyle = [
   },
 ];
 
-export default function DarkMap() {
-  // State to track if user wants to interact with the map
-  const [showMap, setShowMap] = useState(false);
-
+function MapLoader() {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
-    // Prevent the script from loading until we actually need it
     preventGoogleFontsLoading: true,
   });
 
@@ -79,16 +75,32 @@ export default function DarkMap() {
       clickableIcons: false,
       styles: darkStyle,
     }),
-    []
+    [],
   );
 
-  // If map isn't requested yet OR script isn't loaded, show the Facade (Image)
-  if (!showMap || !isLoaded) {
+  if (!isLoaded) return null;
+
+  return (
+    <GoogleMap
+      mapContainerStyle={containerStyle}
+      center={center}
+      zoom={10}
+      options={options}
+    >
+      <Marker position={center} />
+    </GoogleMap>
+  );
+}
+
+export default function DarkMap() {
+  const [showMap, setShowMap] = useState(false);
+
+  if (!showMap) {
     return (
       <div
         className="w-full h-full relative cursor-pointer group rounded-xl overflow-hidden"
         onClick={() => setShowMap(true)}
-        onMouseEnter={() => setShowMap(true)} // Optional: Load on hover
+        onMouseEnter={() => setShowMap(true)}
       >
         <Image
           src="/images/DarkMap.png"
@@ -110,14 +122,5 @@ export default function DarkMap() {
     );
   }
 
-  return (
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={center}
-      zoom={10}
-      options={options}
-    >
-      <Marker position={center} />
-    </GoogleMap>
-  );
+  return <MapLoader />;
 }

@@ -1,8 +1,9 @@
 import AnimatedCircle from "../components/Animations/AnimatedCircle/AnimatedCircle";
 import "react-circular-progressbar/dist/styles.css";
 import TiltedCard from "../components/Animations/TiltedCard/TiltedCard";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaGithub } from "react-icons/fa";
 import { GiLightBulb } from "react-icons/gi";
+import { FiExternalLink } from "react-icons/fi";
 import styles from "./about.module.css";
 import AOSWrapper from "../components/Animations/AOSWrapper/AOSWrapper";
 
@@ -144,7 +145,7 @@ export default function About() {
         </section>
 
         {/* ===== Tools & Interests ===== */}
-        <section className="grid order-4 mb-20 justify-center grid-cols-1 md:grid-cols-2 gap-10">
+        <section className="grid order-5 mb-20 justify-center grid-cols-1 md:grid-cols-2 gap-10">
           <div
             data-aos="fade-right"
             className="card bg-black light:bg-white rounded-xl p-10"
@@ -201,7 +202,7 @@ export default function About() {
         {/* ===== Developer Skills ===== */}
         <div
           // data-aos="fade-right"
-          className="flex flex-col my-0 lg:my-8 lg:flex-row order-3 justify-center items-center"
+          className="flex flex-col my-0 lg:my-8 lg:flex-row order-4 justify-center items-center"
         >
           <h1 className="lg:text-xl transition-colors duration-300 text-2xl underline lg:no-underline text-center font-extrabold text-white light:text-black mb-13 mr-0 lg:mb-0 lg:mr-10">
             Developer Skills
@@ -219,66 +220,206 @@ export default function About() {
             ))}
           </div>
         </div>
-        {/* ===== Education & Experience ===== */}
-        <section
-          data-aos="fade-right"
-          className="bg-black order-2 light:bg-white border light:border-stone-300 rounded-xl px-6 py-12 flex justify-evenly max-[850px]:flex-col flex-row gap-12 max-[500px]:gap-18"
-        >
-          {/* Education */}
-          <div className="flex flex-col max-[850px]:items-center max-[850px]:gap-6 justify-center">
-            <h1 className="text-white max-[850px]:font-black font-bold light:text-black transition-all duration-300 light:font-black max-[850px]:text-2xl text-xl">
-              Education
-            </h1>
-            <div className="flex flex-col h-full items-center justify-center">
-              <span className="text-white light:text-black transition-all duration-300 font-bold text-lg max-[405px]:text-[16px] px-4 max-[850px]:py-0 py-3 rounded-full">
-                2020 - 2025
-              </span>
-              <div>
-                <span className="text-white text-center light:text-black transition-all duration-300 font-bold text-lg max-[405px]:text-[16px] block">
-                  University of Western Macedonia
+        {/* ===== Education & Experience Timeline ===== */}
+        <section data-aos="fade-right" className="order-2">
+          <h2 className="text-white light:text-black font-bold text-xl mb-10 transition-colors duration-300">
+            Education &amp; Experience
+          </h2>
+
+          {/* Horizontal timeline — md+ */}
+          <div className="hidden sm:flex relative">
+            <div className="absolute h-px bg-neutral-700 light:bg-stone-300 top-[5px] inset-x-0 transition-colors duration-300" />
+            {[
+              {
+                type: "Education",
+                date: "2020 – 2025",
+                title: "University of Western Macedonia",
+                sub: "BSc in Computer Science",
+              },
+              {
+                type: "Experience",
+                date: "07/2024 – 10/2024",
+                title: "Omega Systems",
+                sub: "FullStack Dev Intern",
+              },
+              {
+                type: "Experience",
+                date: "01/2026 – 04/2026",
+                title: "Epectasi",
+                sub: "ERP Tech Support",
+              },
+            ].map(({ type, date, title, sub }) => (
+              <div
+                key={title}
+                className="flex-1 flex flex-col items-center text-center px-4"
+              >
+                <div className="w-3 h-3 rounded-full bg-neutral-500 light:bg-stone-500 ring-4 ring-neutral-950 light:ring-white relative z-10 mb-5 shrink-0 transition-colors duration-300" />
+                <span className="text-xs uppercase tracking-widest text-neutral-500 light:text-stone-400 font-semibold transition-colors duration-300">
+                  {type}
                 </span>
-                <span className="text-neutral-400 transition-all duration-300 light:text-stone-600 text-[15px] max-[405px]:text-[14px] text-center block">
-                  BSc in Computer Science
-                </span>
+                <time className="text-sm text-neutral-400 light:text-stone-500 mt-1 transition-colors duration-300">
+                  {date}
+                </time>
+                <h3 className="text-white light:text-black font-semibold mt-2 text-sm leading-snug transition-colors duration-300">
+                  {title}
+                </h3>
+                <p className="text-neutral-400 light:text-stone-600 text-sm mt-0.5 transition-colors duration-300">
+                  {sub}
+                </p>
               </div>
-            </div>
+            ))}
           </div>
 
-          {/* Experience */}
-          <div className="flex flex-col max-[850px]:px-6 max-[850px]:mx-auto">
-            <h1 className="text-white max-[850px]:text-center max-[850px]:font-black font-bold light:text-black transition-all duration-300 light:font-black max-[850px]:text-2xl text-xl">
-              Experience
-            </h1>
-            <div className="space-y-6">
-              {[
-                ["2024 (Jul – Oct)", "Omega Systems", "Web Developer Intern"],
-                [
-                  "2024 (Jan - Nov)",
-                  "CineGame Critic",
-                  "Next.js FullStack App",
-                ],
-                ["2024 (Oct - Dec)", "Set Website", "FullStack Developer"],
-                ["2023 (Oct - Dec)", "Boston Kitchen", "Web Designer"],
-                ["2023 (Sep - Oct)", "Nekenergy", "Web Developer"],
-              ].map(([date, company, role]) => (
-                <div
-                  key={company}
-                  className="flex max-[555px]:items-center max-[500px]:flex-col mt-8 flex-row max-[500px]:gap-2.5 gap-5"
-                >
-                  <span className="text-neutral-400 w-max text-sm transition-all duration-300 bg-neutral-900 light:text-stone-800 light:bg-stone-200 light:border light:border-stone-400 px-5 py-3 rounded-full">
-                    {date}
-                  </span>
-                  <div>
-                    <p className="text-white transition-colors duration-300 max-[500px]:text-center light:text-black font-semibold">
-                      {company}
-                    </p>
-                    <p className="text-neutral-400 max-[500px]:text-center transition-colors duration-300 text-sm">
-                      {role}
-                    </p>
-                  </div>
+          {/* Vertical timeline — mobile */}
+          <ol className="sm:hidden relative border-l-2 border-neutral-700 light:border-stone-300 ml-2 transition-colors duration-300">
+            <li className="mb-8 ms-6">
+              <span className="absolute w-3 h-3 rounded-full bg-neutral-500 light:bg-stone-500 ring-4 ring-neutral-950 light:ring-white -left-1.5 mt-1.5 transition-colors duration-300" />
+              <span className="text-xs uppercase tracking-widest text-neutral-500 light:text-stone-400 font-semibold transition-colors duration-300">
+                Education
+              </span>
+              <time className="block text-sm text-neutral-400 light:text-stone-500 mt-0.5 transition-colors duration-300">
+                2020 – 2025
+              </time>
+              <h3 className="text-white light:text-black font-semibold mt-1 transition-colors duration-300">
+                University of Western Macedonia
+              </h3>
+              <p className="text-neutral-400 light:text-stone-600 text-sm transition-colors duration-300">
+                BSc in Computer Science
+              </p>
+            </li>
+            {[
+              {
+                date: "07/2024 – 10/2024",
+                company: "Omega Systems",
+                role: "FullStack Dev Intern",
+              },
+              {
+                date: "01/2026 – 04/2026",
+                company: "Epectasi",
+                role: "ERP Tech Support",
+              },
+            ].map(({ date, company, role }) => (
+              <li key={company} className="mb-8 ms-6">
+                <span className="absolute w-3 h-3 rounded-full bg-neutral-500 light:bg-stone-500 ring-4 ring-neutral-950 light:ring-white -left-1.5 mt-1.5 transition-colors duration-300" />
+                <span className="text-xs uppercase tracking-widest text-neutral-500 light:text-stone-400 font-semibold transition-colors duration-300">
+                  Experience
+                </span>
+                <time className="block text-sm text-neutral-400 light:text-stone-500 mt-0.5 transition-colors duration-300">
+                  {date}
+                </time>
+                <h3 className="text-white light:text-black font-semibold mt-1 transition-colors duration-300">
+                  {company}
+                </h3>
+                <p className="text-neutral-400 light:text-stone-600 text-sm transition-colors duration-300">
+                  {role}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* ===== Projects ===== */}
+        <section data-aos="fade-right" className="order-3">
+          <h2 className="text-white light:text-black font-bold text-xl mb-8 transition-colors duration-300">
+            Projects
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {(
+              [
+                {
+                  name: "CineGame Critic",
+                  label: "Thesis",
+                  url: "https://www.cinegame-critic.com",
+                  github: "https://github.com/Stefanos2002/CGC",
+                  description:
+                    "Full-stack game & movie review platform with 1,800+ games, real-time filtering, JWT auth, and role-based access control.",
+                  tags: ["Next.js", "TypeScript", "MongoDB", "JWT"],
+                },
+                {
+                  name: "Spoudas Paint",
+                  label: null,
+                  url: "https://www.spoudaspaint.gr",
+                  github: "https://github.com/Stefanos2002/spoudas-paint",
+                  description:
+                    "Business website with SSR, a booking system, and Payload CMS — fully client-managed without touching code.",
+                  tags: ["Next.js", "Payload CMS", "TypeScript"],
+                },
+                {
+                  name: "SET.gr",
+                  label: null,
+                  url: "https://www.set.gr",
+                  github: null,
+                  description:
+                    "WordPress business site with custom PHP fields, Twig templates, and a rebuilt JS navigation for mobile responsiveness.",
+                  tags: ["WordPress", "PHP", "Twig", "JavaScript"],
+                },
+                {
+                  name: "Portfolio",
+                  label: "This site",
+                  url: "https://www.kaloulis.dev",
+                  github: "https://github.com/Stefanos2002/myPortfolio",
+                  description:
+                    "Multi-page portfolio with Cloudinary video previews, Google Maps API, server-side contact form, and 90+ Lighthouse score.",
+                  tags: ["Next.js 14", "TypeScript", "Cloudinary"],
+                },
+              ] as {
+                name: string;
+                label: string | null;
+                url: string;
+                github: string | null;
+                description: string;
+                tags: string[];
+              }[]
+            ).map(({ name, label, url, github, description, tags }) => (
+              <div
+                key={name}
+                className="bg-black light:bg-white rounded-xl p-6 border border-neutral-800 light:border-stone-200 flex flex-col gap-3 transition-colors duration-300"
+              >
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-white light:text-black font-semibold transition-colors duration-300">
+                    {name}
+                  </h3>
+                  {label && (
+                    <span className="text-xs bg-neutral-800 light:bg-stone-200 text-neutral-400 light:text-stone-600 px-2 py-1 rounded-full shrink-0 transition-colors duration-300">
+                      {label}
+                    </span>
+                  )}
                 </div>
-              ))}
-            </div>
+                <p className="text-neutral-400 light:text-stone-600 text-sm leading-relaxed flex-1 transition-colors duration-300">
+                  {description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs bg-neutral-900 light:bg-stone-100 text-neutral-300 light:text-stone-700 px-2 py-1 rounded transition-colors duration-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-4 mt-1">
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-sm text-neutral-400 hover:text-white light:hover:text-black transition-colors duration-200"
+                  >
+                    <FiExternalLink size={14} /> Live
+                  </a>
+                  {github && (
+                    <a
+                      href={github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-sm text-neutral-400 hover:text-white light:hover:text-black transition-colors duration-200"
+                    >
+                      <FaGithub size={14} /> GitHub
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </div>
