@@ -10,14 +10,15 @@ import AOSWrapper from "../components/Animations/AOSWrapper/AOSWrapper";
 export default function About() {
   const skills = [
     { label: "Next.js", value: 90 },
-    { label: "React.js", value: 86 },
+    { label: "React.js", value: 80 },
     { label: "TypeScript", value: 83 },
     { label: "JavaScript", value: 80 },
-    { label: "Tailwind", value: 95 },
+    { label: "Tailwind", value: 90 },
     { label: "HTML", value: 95 },
-    { label: "Node.js", value: 78 },
-    { label: "MongoDB", value: 76 },
-    { label: "WordPress", value: 73 },
+    { label: "Node.js", value: 72 },
+    { label: "MongoDB", value: 60 },
+    { label: "Payload", value: 70 },
+    { label: "WordPress", value: 63 },
   ];
   return (
     <section className="w-full min-h-screen overflow-x-hidden flex justify-center px-10 min-[1060px]:px-20 max-[520px]:px-5 pt-40 xl:pt-20">
@@ -248,6 +249,12 @@ export default function About() {
                 title: "Epectasi",
                 sub: "ERP Tech Support",
               },
+              {
+                type: "Experience",
+                date: "06/2026 – 11/2026",
+                title: "Tescon",
+                sub: "Automation Engineer",
+              },
             ].map(({ type, date, title, sub }) => (
               <div
                 key={title}
@@ -327,40 +334,45 @@ export default function About() {
             {(
               [
                 {
-                  name: "CineGame Critic",
+                  name: "PIXEL MOVIES",
                   label: "Thesis",
-                  url: "https://www.cinegame-critic.com",
-                  github: "https://github.com/Stefanos2002/CGC",
+                  url: "https://www.pixelmovies.gr",
+                  github: "https://github.com/Stefanos2002/pixelmovies",
                   description:
                     "Full-stack game & movie review platform with 1,800+ games, real-time filtering, JWT auth, and role-based access control.",
-                  tags: ["Next.js", "TypeScript", "MongoDB", "JWT"],
+                  tags: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS"],
                 },
                 {
-                  name: "Spoudas Paint",
+                  name: "SPOUDAS PAINT",
                   label: null,
                   url: "https://www.spoudaspaint.gr",
                   github: "https://github.com/Stefanos2002/spoudas-paint",
                   description:
                     "Business website with SSR, a booking system, and Payload CMS — fully client-managed without touching code.",
-                  tags: ["Next.js", "Payload CMS", "TypeScript"],
+                  tags: [
+                    "Next.js",
+                    "Payload CMS",
+                    "TypeScript",
+                    "Tailwind CSS",
+                  ],
                 },
                 {
-                  name: "SET.gr",
+                  name: "KING FRUIT",
+                  label: null,
+                  url: "https://www.kingfruit.gr",
+                  github: null,
+                  description:
+                    "Multilingual (Greek, English, German) business site for a fruit exporter, built with Next.js and TypeScript, with a cookie-consent system and a product showcase.",
+                  tags: ["Next.js", "Typescript", "Tailwind CSS"],
+                },
+                {
+                  name: "SET",
                   label: null,
                   url: "https://www.set.gr",
                   github: null,
                   description:
                     "WordPress business site with custom PHP fields, Twig templates, and a rebuilt JS navigation for mobile responsiveness.",
                   tags: ["WordPress", "PHP", "Twig", "JavaScript"],
-                },
-                {
-                  name: "Portfolio",
-                  label: "This site",
-                  url: "https://www.kaloulis.dev",
-                  github: "https://github.com/Stefanos2002/myPortfolio",
-                  description:
-                    "Multi-page portfolio with Cloudinary video previews, Google Maps API, server-side contact form, and 90+ Lighthouse score.",
-                  tags: ["Next.js 14", "TypeScript", "Cloudinary"],
                 },
               ] as {
                 name: string;

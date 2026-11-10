@@ -5,7 +5,7 @@ export default function Portfolio() {
   return (
     <main className="flex items-center justify-center relative pt-10 px-20 max-[850px]:px-8 max-[650px]:px-4 flex-col w-full min-h-screen">
       <AOSWrapper />
-      <div className="w-full mt-34 xl:mt-10 max-w-5xl justify-center flex flex-col gap-20 xl:gap-32">
+      <div className="w-full mt-34 xl:mt-10 max-w-5xl justify-center flex flex-col">
         {/* ===== Header ===== */}
         <header
           data-aos="fade-right"

@@ -24,7 +24,7 @@ export default function ContactForm() {
       });
       const data = await res.json();
       if (data.success) setStatus("Message sent!");
-      else setStatus("Failed to send message.");
+      else setStatus(data.error ?? "Failed to send message.");
     } catch {
       setStatus("Failed to send message.");
     }

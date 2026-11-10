@@ -8,14 +8,19 @@ import SplitText from "../SplitText";
 
 const projects = [
   {
-    title: "Cinegame Critic",
+    title: "PIXEL MOVIES",
     src: process.env.NEXT_PUBLIC_VID_CGC || "",
-    link: "https://www.cinegame-critic.com/",
+    link: "https://www.pixelmovies.gr/",
   },
   {
-    title: "Spoudas Paint",
+    title: "SPOUDAS PAINT",
     src: process.env.NEXT_PUBLIC_VID_SPOUDASPAINT || "",
     link: "https://www.spoudaspaint.gr/",
+  },
+  {
+    title: "KING FRUIT",
+    src: process.env.NEXT_PUBLIC_VID_KINGFRUIT || "",
+    link: "https://www.kingfruit.gr/",
   },
   {
     title: "SET",
@@ -70,6 +75,7 @@ const Card = ({
           {link && (
             <a
               href={link}
+              target="_blank"
               className="px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors"
             >
               Live Demo
@@ -96,9 +102,9 @@ export default function CardContainer() {
         ref={container}
         // CHANGED: 'max-[1000px]:pb-0' - Removes the huge bottom padding needed for sticky scroll
         // since we are just stacking them normally now.
-        className="relative flex order-2 w-full flex-col items-center justify-center pt-10 pb-[38vh] max-[1000px]:pb-6"
+        className="relative flex order-2 w-full flex-col items-center justify-center pb-[38vh] max-[1000px]:pb-6"
       >
-        <SplitText
+        {/* <SplitText
           text="Check out some of my past projects"
           className="text-2xl max-[650px]:text-xl max-[520px]:text-lg mx-4 transition-all duration-300 text-center max-[1000px]:mb-26 p-5 px-8 border-[0.5] text-white light:text-black light:border-black light:border-2"
           delay={70}
@@ -110,7 +116,7 @@ export default function CardContainer() {
           threshold={0.1}
           rootMargin="-100px"
           textAlign="center"
-        />
+        /> */}
         {projects.map((project, i) => {
           // Logic remains mainly for desktop.
           // On mobile, the scale is disabled via CSS !transform-none.

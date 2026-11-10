@@ -9,11 +9,11 @@ export default function Services() {
       description:
         "Crafting modern, and visually appealing layouts tailored to client needs while ensuring both aesthetics and usability.",
       intro:
-        "During my studies and professional experience, I have designed websites focused on usability, clean structure, and modern visuals. My work includes redesigns for real businesses such as Boston Kitchen, Nekenergy, and SET, where I improved layouts, optimized structure, and enhanced the overall user experience.",
+        "I have designed websites focused on usability, clean structure, and modern visuals, both during my studies and in professional work. My projects include designs for real businesses such as SpoudasPaint and KingFruit, covering layout, content structure, and user experience.",
       qualifications: [
         "Custom UI layouts built with modern design principles",
         "Clean, professional structures using HTML5, CSS, and Tailwind CSS",
-        "Improved readability, spacing, and visual hierarchy",
+        "Readability, spacing, and visual hierarchy",
         "Mobile-first design approach",
         "Brand-aligned presentation and style consistency",
       ],
@@ -27,7 +27,7 @@ export default function Services() {
       description:
         "Building fast, dynamic, and scalable websites using HTML, CSS, JavaScript, React, Next.js, TypeScript, and Tailwind CSS.",
       intro:
-        "I develop dynamic, responsive, and scalable websites using technologies I have learned through university, personal projects, and my internship at Omega Systems. I specialize in React, Next.js, and TypeScript, and have built full-stack applications such as CineGame Critic, hosted on Vercel.",
+        "I develop dynamic, responsive, and scalable websites using technologies I have learned through university, personal projects, and my internship at Omega Systems. I specialize in React, Next.js, and TypeScript, and have built full-stack applications such as PixelMovies, hosted on Vercel.",
       qualifications: [
         "Full frontend development with React & Next.js",
         "Clean, structured code using TypeScript",
@@ -65,12 +65,12 @@ export default function Services() {
       description:
         "Ensuring seamless user experiences across all devices with fully responsive, mobile-friendly layouts.",
       intro:
-        "I ensure that every website I build is fully responsive and mobile-friendly. I’ve delivered major responsiveness improvements for projects such as SET, Nekenergy, and Boston Kitchen, where I optimized layout behavior on phones, tablets, and larger screens.",
+        "I build every website to be fully responsive and mobile-friendly from the start. For all my projects I ensured there are layouts that adapt smoothly to phones, tablets, and larger screens.",
       qualifications: [
         "Mobile-first structure with CSS and Tailwind",
-        "Flexible grids, optimized scaling, and adaptive components",
-        "Fixing broken layouts, alignment issues, and spacing",
-        "Improving usability on touch devices",
+        "Flexible grids, fluid scaling, and adaptive components",
+        "Consistent alignment and spacing across every breakpoint",
+        "Touch-friendly interactions and mobile usability",
         "Cross-device testing",
       ],
       image: "/images/responsive2.png",

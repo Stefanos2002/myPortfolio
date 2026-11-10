@@ -38,7 +38,7 @@ export default function Navbar() {
         ))}
       </ul>
       <div className="text-neutral-400 transition-all duration-200 light:text-black light:font-semibold text-left italic mr-4">
-        © 2025 Portfolio
+        © 2026 Portfolio
       </div>
     </nav>
   );
